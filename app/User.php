@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Authenticatable
 {
@@ -15,7 +16,22 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'password',
+        'first_name',
+        'last_name',
+        'salutation_id',
+        'title',
+        'profile_picture',
+        'address',
+        'city',
+        'province_id',
+        'country_id',
+        'postal_code',
+        'email',
+        'phone',
+        'phone_preference_id',
+        'contact_preference_id',
+        'casl_agreement'
     ];
 
     /**
@@ -26,4 +42,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function salutation(){
+        return $this->belongsTo(Salutation::class, 'salutation_id');
+    }
+
+    public function admin() {
+        if (Auth::check() && Auth::user()->is_admin == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
