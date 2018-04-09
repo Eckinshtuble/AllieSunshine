@@ -27,7 +27,7 @@
 </head>
 <body>
 <header>
-    <nav>
+    <nav class="nav-contain">
         <div class="row">
             <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon"></i></a>
             <a href="{{ url('index') }}"><img src={{ URL::asset('images/logo.png')}} alt="Logo" class="logo"></a>

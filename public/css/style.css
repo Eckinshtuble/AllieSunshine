@@ -33,6 +33,10 @@ img {
 	padding-left: 25px;
 }
 
+.nav-contain {
+	height: 20vh;
+}
+
 .main-nav li a {
     text-decoration: none;
     color: navy;
@@ -81,8 +85,8 @@ img {
 }
 
 .logo {
-    height: 150px;
-	width: 270px;
+    height: 100%;
+	width: 20%;
 	float: left;
 }
 
@@ -92,7 +96,7 @@ img {
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
-	height: 100vh;
+	height: 80vh;
 }
 
 .header-background {
