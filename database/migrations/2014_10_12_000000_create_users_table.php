@@ -31,7 +31,7 @@ class CreateUsersTable extends Migration
             $table->integer('phone_preference_id')->unsigned()->nullable();
             $table->integer('contact_preference_id')->unsigned()->nullable();
             $table->boolean('casl_agreement')->default(0);
-            $table->date('casl_agreementDate');
+            $table->date('casl_agreementDate')->nullable();
             $table->boolean('is_admin')->default(0);
             $table->rememberToken();
             $table->timestamps();
