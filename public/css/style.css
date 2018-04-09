@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+img {
+    width: 100%;
+    height: 100vh;
+}
+
+.main-nav {
+	float: left;
+	list-style: none;
+	margin-top: 65px;
+    margin-bottom: 55px;
+    max-width: 750px;
+    font-size: 14px;
+}
+
+.main-nav li {
+	display: inline-block;
+	margin-left: 0;
+	padding-left: 25px;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: navy;
+    text-transform: uppercase;
+	padding-bottom: 3px;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	border: 1px solid red;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.main-nav-auth {
+    float: right;
+    list-style: none;
+    margin-top: 65px;
+    padding-right: 25px;
+    font-size: 14px;
+    max-width: 400px;
+}
+
+.main-nav-auth li {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+.main-nav-auth li a {
+    text-decoration: none;
+    color: navy;
+    text-transform: uppercase;
+	padding-bottom: 3px;
+}
+
+.logo {
+    height: 150px;
+	width: 270px;
+	float: left;
+}
+
+.header-image {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/Carousel4.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/Carousel4.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	height: 100vh;
+}
+
+.header-background {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-45%, 10%);
+    width: 100%;
+    padding: 10px 0;
+}
+
+
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover, 
+a:active {
+	color: #555;
+	border-bottom: 1px solid #ffe607;
+}
+
+.wrap {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.container {
+	text-align: center;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+h2 {
+	text-align: center;
+}
+
+.container > img {
+	padding: 5px;
+	width: 305px;
+	height: 250px;
+	transition: transform .6s;
+	image-orientation: from-image;
+}
+
+.container > img:hover {
+	transform: scale(1.2);
+}
+
+
+/* BUTTONS */
+
+.btn:link, 
+.btn:visited,
+input[type=submit] {
+display: inline-block;
+padding: 10px 30px;
+font-weight: 300;
+color: #ffe607;
+border-radius: 200px;
+-webkit-transition: border 0.3s, color 0.3s;
+transition: border 0.3s, color 0.3s;
+text-decoration: none;
+}
+
+.btn-price:link, 
+.btn-price:visited,
+input[type=submit] {
+ 	color: #ffe607;
+}
+
+
+.btn-full:link, .btn-full:visited {
+	 border: 1px solid #ffe607;
+	 margin-right: 15px;
+     background-color: #ffe607;
+     color: navy;
+}
+
+.btn-ghost:link, .btn-ghost:visited, input[type=submit]{
+    border: 1px solid #ffe607;
+}
+
+
+.btn:hover, .btn:active, 
+input[type=submit]:hover,
+input[type=submit]:active {
+	
+	background-color: #ffd507;
+	border: 1px solid #ffd507;
+	color: navy;
+    
+}
+
+
+h2, h3 {
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+h1 {
+	margin-top: 0;
+	margin-bottom: 20px;
+	color: ghostwhite;
+	font-size: 240%;
+	word-spacing: 4px;
+	letter-spacing: 1px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h2 {
+	font-size: 180%;
+	word-spacing: 2px;
+	text-align: center;
+	margin-bottom: 30px;
+	letter-spacing: 1px;
+}
+
+h3 {
+
+	font-size: 110%;
+	margin-bottom: 15px;
+}
+
+h2:after {
+
+	display: block;
+	height: 2px;
+	background-color: #ffe607;
+	content: " ";
+	width: 100px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+
+.section-features {
+    padding: 40px 0;
+}
+.section-features .long-copy {
+	margin-bottom: 50px;
+}
+
+.section-get-involved {
+	background-color: #f4f4f4;
+}
+
+.long-copy {
+	line-height: 145%;
+	width: 70%;
+	margin-left: 15%;
+}
+
+.box p {
+
+	font-size: 90%;
+	line-height: 145%;
+}
+    
+.mobile-nav-icon {
+    float: left;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+
+
