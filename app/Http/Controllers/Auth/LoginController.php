@@ -52,9 +52,13 @@ class LoginController extends Controller
      */
     public function handleProviderCallback()
     {
-        $user = Socialite::driver('facebook')->user();
+        try {
+            $user = Socialite::driver('facebook')->user();
+        } catch(\Exception $e) {
+            return redirect('/');
+        }
 
-        /*$findUser = User::where('email', $user->getEmail())->first();
+        $findUser = User::where('email', $user->getEmail())->first();
 
         if($findUser) {
             Auth::login($findUser);
@@ -63,15 +67,12 @@ class LoginController extends Controller
 
             $newUser->email = $user->getEmail();
 
-            $newUser->name = $user->getName();
-
-            $newUser->password = bcrypt(123456);
-
             $newUser->save();
 
             Auth::login($newUser);
-        }*/
+        }
 
-        return $user->name;
+
+        return redirect('/');
     }
 }

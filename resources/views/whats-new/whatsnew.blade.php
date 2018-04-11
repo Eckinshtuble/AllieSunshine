@@ -10,7 +10,7 @@
             <div class="one">
                 <h3>Article Title</h3>
                 <br />
-                <img src="{{ asset('images/gallery/5.jpg') }} " class="image">
+                <img src="{{ asset('images/gallery/gallery-3_opt.jpg') }} " class="image">
             </div>
             <br />
 
@@ -39,7 +39,7 @@
             <div class="one">
                 <h3>Article Title</h3>
                 <br />
-                <img src="{{ asset('images/gallery/3.jpg') }}" class="image">
+                <img src="{{ asset('images/gallery/gallery-3_opt.jpg') }}" class="image">
             </div>
             <br />
 

@@ -7,7 +7,7 @@
         <h2>Login</h2>
     <form class="form-login" role="form" method="POST" action="{{ url('/login') }}">
         {{ csrf_field() }}
-
+        <div class="wrapper-inner">
         <div class="{{ $errors->has('email') ? ' has-error' : '' }}">
             <input id="email" type="email" placeholder="E-mail Address" name="email" value="{{ old('email') }}" required>
 
@@ -28,17 +28,17 @@
             @endif
         </div>
         <br />
-        <div class="wrapper-inner">
             <div>
                 <button type="submit" class="btn-login">
                     Login
                 </button>
                 <a href="{!! url('/login/google') !!}" class="google">Login with Google+</a>
+                <a href="{!! url('/login/facebook') !!}" class="facebook">Login with Facebook</a>
             </div>
 
             <div>
                 <div class="buttons">
-                    <a class="btn btn-link" href="{{ url('/password/reset') }}">
+                    <a class="btn-pw-reset" href="{{ url('/password/reset') }}">
                         Forgot Your Password?
                     </a>
                 </div>

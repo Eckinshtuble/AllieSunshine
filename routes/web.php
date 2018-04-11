@@ -27,6 +27,10 @@ Route::get('getinvolved', function (){
     return view('get-involved/getinvolved');
 });
 
+Route::get('calendar', function (){
+    return view('calendar/calendar');
+});
+
 Route::get('blog', function (){
     return view('blog/blog');
 });

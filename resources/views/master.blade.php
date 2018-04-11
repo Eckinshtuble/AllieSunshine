@@ -30,22 +30,20 @@
     <nav class="nav-contain">
         <div class="row">
             <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon"></i></a>
-            <a href="{{ url('index') }}"><img src={{ URL::asset('images/logo.png')}} alt="Logo" class="logo"></a>
+            <a href="{{ url('index') }}"><img src={{ URL::asset('images/logo_opt.png')}} alt="Logo" class="logo"></a>
             <ul class="main-nav js--main-nav">
                 <li><a href="{{ url('index') }}">Home</a></li>
-                <li><a href="{{ url('legacy') }}">Legacy</a></li>
-                <li><a href="{{ url('gallery') }}">Gallery</a></li>
-                <!--<li><a class="dropbtn" href="{{ url('whatsnew') }}">What's New</a></li>-->
                 <li class="dropdown">
-                    <button class="dropbtn"><a href="{{ url('whatsnew') }}">What's New
-                        <i class="fa fa-caret-down"></i>
+                    <button class="dropbtn"><a href="{{ url('whatsnew') }}">What's NeW
                         </a></button>
                     <div class="dropdown-content">
                         <a href="{{ url('whatsnew') }}">Calendar</a>
                         <a href="{{ url('whatsnew') }}">Events</a>
                     </div>
                 </li>
+                <li><a href="{{ url('legacy') }}">Legacy</a></li>
                 <li><a href="{{ url('getinvolved') }}">Get Involved</a></li>
+                <li><a href="{{ url('gallery') }}">Gallery</a></li>
                 <li><a href="{{ url('contact') }}">Contact</a></li>
             </ul>
             <!-- Right Side Of Navbar -->

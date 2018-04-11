@@ -5,46 +5,76 @@
     padding-bottom: 50px;
 }
 
-input {
-    display: inline-block;
-    padding: 10px 30px;
-    font-weight: 300;
-    color: #ffe607;
-    -webkit-transition: border 0.3s, color 0.3s;
-    transition: border 0.3s, color 0.3s;
-    text-decoration: none;
-    width: 500px;
-}
+#email, #password {
+     display: block;
+     padding: 10px 30px;
+     font-weight: 300;
+     color: navy;
+     -webkit-transition: border 0.3s, color 0.3s;
+     transition: border 0.3s, color 0.3s;
+     text-decoration: none;
+     width: 400px;
+     border-radius: 200px;
+     margin: 0 auto;
+     height: 40px;
+ }
 
 .btn-login {
-    display: inline-block;
+    display: block;
     padding: 10px 30px;
     font-weight: 300;
-    color: #ffe607;
+    color: navy;
     background-color: transparent;
     -webkit-transition: border 0.3s, color 0.3s;
     transition: border 0.3s, color 0.3s;
     text-decoration: none;
     cursor: pointer;
-    width: 150px;
-    float: left;
-    margin-top: -1px;
+    width: 400px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 200px;
 }
 
 .google {
-    display: inline-block;
+    display: block;
     padding: 10px 30px;
     font-weight: 300;
-    color: #ffe607;
-    background-color: transparent;
+    color: ghostwhite;
+    background-color: orangered;
     -webkit-transition: border 0.3s, color 0.3s;
     transition: border 0.3s, color 0.3s;
     text-decoration: none;
     cursor: pointer;
-    width: 250px;
+    width: 400px;
     border: 1px solid lightgray;
-    float: right;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    border-radius: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.facebook {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    color: ghostwhite;
+    background-color: blue;
+    -webkit-transition: border 0.3s, color 0.3s;
+    transition: border 0.3s, color 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+    width: 400px;
+    border: 1px solid lightgray;
+    margin-bottom: 15px;
+    border-radius: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.facebook:hover, .google:hover {
+    color: lightgray;
+    border: 1px solid orangered;
 }
 
 .form-login {
@@ -67,4 +97,5 @@ input:focus {
 .wrapper-inner {
     width: 500px;
     margin: 0 auto;
+    text-align: center;
 }
