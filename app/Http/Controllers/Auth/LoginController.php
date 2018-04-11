@@ -42,7 +42,7 @@ class LoginController extends Controller
 
     public function redirectToProvider()
     {
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver('facebook')->redirect();
     }
 
     /**
@@ -52,9 +52,9 @@ class LoginController extends Controller
      */
     public function handleProviderCallback()
     {
-        $user = Socialite::driver('google')->stateless()->user();
+        $user = Socialite::driver('facebook')->user();
 
-        $findUser = User::where('email', $user->getEmail())->first();
+        /*$findUser = User::where('email', $user->getEmail())->first();
 
         if($findUser) {
             Auth::login($findUser);
@@ -70,8 +70,8 @@ class LoginController extends Controller
             $newUser->save();
 
             Auth::login($newUser);
-        }
+        }*/
 
-        return redirect('index');
+        return $user->name;
     }
 }

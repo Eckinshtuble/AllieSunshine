@@ -34,5 +34,9 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-
+    'facebook' => [
+        'client_id' => '927271527433692',
+        'client_secret' => '27ab20a14ba4b27d5d16b215b5db8a3e',
+        'redirect' => 'https://mcipriano.scweb.ca/AllieSunshine/login/facebook/callback',
+    ],
 ];

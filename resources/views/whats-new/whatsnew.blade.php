@@ -67,5 +67,13 @@
 
 
     </section>
+
+    <section class="section-features calendar" id="calendar">
+        <div>I AM THE CALENDAR!</div>
+    </section>
+
+    <section class="section-features calendar" id="events">
+        <div>I AM THE EVENTS!</div>
+    </section>
 @endsection
 
