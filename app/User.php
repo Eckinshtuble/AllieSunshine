@@ -43,6 +43,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function socialProviders()
+    {
+        return $this->hasMany(SocialProvider::class);
+    }
+
     public function salutation(){
         return $this->belongsTo(Salutation::class, 'salutation_id');
     }

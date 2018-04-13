@@ -1,5 +1,14 @@
 @extends('master')
 @section('content')
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>You have Successfully Logged In!</p>
+        </div>
+
+    </div>
     <div class="header-image">
     </div>
     <div class="header-background">
