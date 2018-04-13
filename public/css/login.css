@@ -5,18 +5,20 @@
     padding-bottom: 50px;
 }
 
-#email, #password {
+#email, #password, #first_name, #last_name {
      display: block;
      padding: 10px 30px;
-     font-weight: 300;
+     font-weight: 200;
+     font-size: 16px;
      color: navy;
      -webkit-transition: border 0.3s, color 0.3s;
      transition: border 0.3s, color 0.3s;
      text-decoration: none;
      width: 400px;
      border-radius: 200px;
-     margin: 0 auto;
-     height: 40px;
+     margin: 0 auto 5px auto;
+     height: 20px;
+     border: 1px solid #ffe607;
  }
 
 .btn-login {
@@ -30,14 +32,20 @@
     text-decoration: none;
     cursor: pointer;
     width: 400px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 200px;
+    height: 20px;
+    border: 1px solid #ffe607;
+}
+
+.btn-login:hover {
+    background-color: #ffe607;
 }
 
 .google {
-    display: block;
+    display: inline;
     padding: 10px 30px;
     font-weight: 300;
     color: ghostwhite;
@@ -47,15 +55,14 @@
     text-decoration: none;
     cursor: pointer;
     width: 400px;
-    border: 1px solid lightgray;
-    margin-bottom: 15px;
+    border: 1px solid orangered;
     border-radius: 200px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .facebook {
-    display: inline-block;
+    display: inline;
     padding: 10px 30px;
     font-weight: 300;
     color: ghostwhite;
@@ -65,16 +72,20 @@
     text-decoration: none;
     cursor: pointer;
     width: 400px;
-    border: 1px solid lightgray;
-    margin-bottom: 15px;
+    border: 1px solid blue;
     border-radius: 200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.facebook:hover, .google:hover {
+.google:hover {
     color: lightgray;
     border: 1px solid orangered;
+}
+
+.facebook:hover {
+    color: lightgray;
+    border: 1px solid blue;
 }
 
 .form-login {
@@ -89,9 +100,19 @@ input:focus {
     outline: none;
 }
 
-.buttons {
+.fgt-pw {
     clear: both;
     text-align: left;
+    margin-top: 35px;
+    width: 200px;
+    margin-left: 20px;
+}
+
+.no-account {
+    border-top: 1px solid lightgray;
+    width: 450px;
+    margin: 15px auto;
+    padding-top: 15px;
 }
 
 .wrapper-inner {

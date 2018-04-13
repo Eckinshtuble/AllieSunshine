@@ -30,6 +30,7 @@ html {
 	 display: flex;
 	 justify-content: center;
 	 align-items: center;
+	 height: auto;
 }
 
 .main-nav li a {
@@ -108,7 +109,7 @@ html {
 
 .logo {
 	width: 200px;
-	height: 100%;
+	height: auto;
 }
 
 .logo-responsive {
@@ -378,7 +379,6 @@ h2:after {
 	display: flex;
 
 	-webkit-flex-flow: row wrap;
-	height: 100%;
 	width: 85%;
 	align-items: center;
 }

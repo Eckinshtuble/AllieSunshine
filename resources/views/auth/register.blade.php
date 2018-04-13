@@ -57,7 +57,7 @@
             <br />
 
             <div class="{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                <input id="password-confirm" type="password" placeholder="Confirm Password" name="password_confirmation" required>
+                <input id="password" type="password" placeholder="Confirm Password" name="password_confirmation" required>
 
                 @if ($errors->has('password_confirmation'))
                     <span class="help-block">
@@ -69,7 +69,7 @@
             <br />
 
             <div>
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn-login">
                     Register
                 </button>
             </div>

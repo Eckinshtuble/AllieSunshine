@@ -36,11 +36,17 @@
                 <a href="{!! url('/login/facebook') !!}" class="facebook">Login with Facebook</a>
             </div>
 
-            <div>
+            <div class="fgt-pw">
                 <div class="buttons">
                     <a class="btn-pw-reset" href="{{ url('/password/reset') }}">
                         Forgot Your Password?
                     </a>
+                </div>
+            </div>
+
+            <div class="no-account">
+                <div class="buttons">
+                    Don't Have an account? <a class="btn-pw-reset" href="{{ url('/register') }}">Sign Up</a>
                 </div>
             </div>
         </div>
