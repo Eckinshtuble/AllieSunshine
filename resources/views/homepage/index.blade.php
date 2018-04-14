@@ -20,7 +20,6 @@
 
 @section('main-body')
 <section class="section-features" id="features">
-    <div class="row wrap">
         <h2>Who We Are</h2>
         <p class="long-copy">
             Allison "Allie Sunshine" Hayes was a beautiful, generous, loving, caring, giving,
@@ -37,12 +36,10 @@
             wellness explorers through creating and participating in projects in our community that nurture
             self healing and capture learning opportunities for our minds, bodies, and spirits.
         </p>
-        <a class="btn btn-full js--scroll-to-plans" href="{{ url('legacy') }}">Learn More</a>
-    </div>
+        <a class="btn btn-full btn-mobile" href="{{ url('legacy') }}">Learn More</a>
 </section>
 
 <section class="section-features section-get-involved" id="features">
-    <div class="row wrap">
         <h2>How to Get Involved</h2>
         <p class="long-copy">
             We are always looking new people to be apart of the Allie Sunshine Project!
@@ -50,7 +47,10 @@
             or if you have a wonderful idea that you would like to share with the Allie
             Sunshine Project.
         </p>
-    </div>
+</section>
+
+<section class="footer">
+        <p>Copyright 2018 The Allie Sunshine Project | Developed by Parallax Web Design</p>
 </section>
 @endsection
 

@@ -86,27 +86,6 @@ html {
 	display: block;
 }
 
-.main-nav-auth {
-    float: right;
-    list-style: none;
-	height: 100%;
-    padding-right: 25px;
-    font-size: 14px;
-    max-width: 400px;
-}
-
-.main-nav-auth li {
-	display: inline-block;
-	margin-left: 40px;
-}
-
-.main-nav-auth li a {
-    text-decoration: none;
-    color: navy;
-    text-transform: uppercase;
-	padding-bottom: 3px;
-}
-
 .logo {
 	width: 200px;
 	height: auto;
@@ -163,7 +142,7 @@ html {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/Carousel4.jpg);
 	background-size: cover;
 	background-attachment: fixed;
-	height: 81vh;
+	height: 85vh;
 }
 
 .header-background {
@@ -187,11 +166,6 @@ a:hover,
 a:active {
 	color: #555;
 	border-bottom: 1px solid #ffe607;
-}
-
-.wrap {
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 h2 {
@@ -317,7 +291,8 @@ h2:after {
 
 .long-copy {
 	line-height: 145%;
-	width: 100%;
+	width: 55%;
+	margin: 0 auto;
 }
 
 .box p {
@@ -397,6 +372,7 @@ h2:after {
 	justify-content: flex-end;
 	align-items: center;
 	width: 15%;
+	padding-right: 20px;
 
 }
 
@@ -413,4 +389,18 @@ h2:after {
 	background: darken(deepskyblue, 2%);
 }
 
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer p {
+	padding: 40px 0;
+}
+
+
+.btn-mobile {
+	margin-left: 22%;
+}
 
