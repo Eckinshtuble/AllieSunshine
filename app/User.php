@@ -10,7 +10,7 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    /**
+    /**\\
      * The attributes that are mass assignable.
      *
      * @var array
@@ -50,6 +50,22 @@ class User extends Authenticatable
 
     public function salutation(){
         return $this->belongsTo(Salutation::class, 'salutation_id');
+    }
+
+    public function province(){
+        return $this->belongsTo(Province::class, 'province_id');
+    }
+
+    public function country(){
+        return $this->belongsTo(Country::class, 'country_id');
+    }
+
+    public function phonePreference(){
+        return $this->belongsTo(PhonePreference::class, 'phone_preference_id');
+    }
+
+    public function contactPreference(){
+        return $this->belongsTo(ContactPreference::class, 'contact_preference_id');
     }
 
     public function admin() {

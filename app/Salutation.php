@@ -8,7 +8,7 @@ class Salutation extends Model
 {
     protected $table = 'salutations';
     protected $fillable = [
-        'skill'
+        'salutation'
     ];
 
     public function users(){
