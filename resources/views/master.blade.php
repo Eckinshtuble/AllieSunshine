@@ -10,7 +10,6 @@
     <!-- Stylesheets -->
     <link href="{{ asset('/css/normalize.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/grid.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/ionicons.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/queries.css') }}" rel="stylesheet">
 
@@ -29,7 +28,14 @@
 <header>
     <div class="row row-nav">
         <a class="logo-link" href="{{ url('index') }}"><img src={{ URL::asset('images/logo_opt.png')}} alt="Logo" class="logo-responsive"></a>
-        <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon"></i></a>
+
+        <div id="nav-icon" class="menu-icon">
+            <div class="menu-icon-top"></div>
+            <div class="menu-icon-middle"></div>
+            <div class="menu-icon-bottom"></div>
+        </div>
+
+
         <ul class="navigation js--main-nav">
             <div><a class="logo-link" href="{{ url('index') }}"><img src={{ URL::asset('images/logo_opt.png')}} alt="Logo" class="logo"></a></div>
             <li><a href="{{ url('index') }}">Home</a></li>
@@ -63,29 +69,6 @@
                 @endif
             </ul>
     </div>
-        @if (session('status'))
-            <div class="alert alert-success">
-                {{ session('status') }}
-            </div>
-        @endif
-    @if (Session::has('status'))
-        <script>
-            var modal = document.getElementById('myModal');
-            var btn = document.getElementById("myBtn");
-            var span = document.getElementsByClassName("close")[0];
-            btn.onclick = function() {
-                modal.style.display = "block";
-            };
-            span.onclick = function() {
-                modal.style.display = "none";
-            };
-            window.onclick = function(event) {
-                if (event.target === modal) {
-                    modal.style.display = "none";
-                }
-            }
-        </script>
-    @endif
     @yield('content')
 </header>
     @yield('main-body')
@@ -94,6 +77,7 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{ asset('/js/bootstrap.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/js/script.js') }}"></script>
 </body>
 </html>
