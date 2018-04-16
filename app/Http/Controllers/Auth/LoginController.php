@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\SocialProvider;
 use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -23,12 +25,18 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
+
+    protected function authenticated(Request $request, $user)
+    {
+        return redirect('/')->with('status', 'You have Successfully Logged In!');
+    }
+
     /**
      * Where to redirect users after login / registration.
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    //protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -40,9 +48,9 @@ class LoginController extends Controller
         $this->middleware('guest', ['except' => 'logout']);
     }
 
-    public function redirectToProvider()
+    public function redirectToProvider($provider)
     {
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver($provider)->redirect();
     }
 
     /**
@@ -50,28 +58,34 @@ class LoginController extends Controller
      *
      * @return Response
      */
-    public function handleProviderCallback()
+    public function handleProviderCallback($provider)
     {
-        $user = Socialite::driver('google')->stateless()->user();
 
-        $findUser = User::where('email', $user->getEmail())->first();
-
-        if($findUser) {
-            Auth::login($findUser);
-        } else {
-            $newUser = new User;
-
-            $newUser->email = $user->getEmail();
-
-            $newUser->name = $user->getName();
-
-            $newUser->password = bcrypt(123456);
-
-            $newUser->save();
-
-            Auth::login($newUser);
+        try{
+            $socialUser = Socialite::driver($provider)->user();
+        } catch(\Exception $e) {
+            return redirect('/');
         }
 
-        return redirect('index');
+        $socialProvider = SocialProvider::where('provider_id', $socialUser->getId())->first();
+
+        if(!$socialProvider) {
+            $user = User::firstOrCreate(
+                ['email' => $socialUser->getEmail()],
+                ['name' => $socialUser->getName()]
+            );
+
+            $user->socialProviders()->create(
+                ['provider_id' => $socialUser->getId(), 'provider' => $provider]
+            );
+
+        } else {
+            $user = $socialProvider->user;
+        }
+
+        auth()->login($user);
+
+        return redirect('getinvolved')->with('status', 'You have Logged In Successfully!');
+
     }
 }

@@ -10,7 +10,6 @@
     <!-- Stylesheets -->
     <link href="{{ asset('/css/normalize.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/grid.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/ionicons.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/queries.css') }}" rel="stylesheet">
 
@@ -27,24 +26,31 @@
 </head>
 <body>
 <header>
-    <nav>
-        <div class="row">
-            <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon"></i></a>
-            <a href="{{ url('index') }}"><img src={{ URL::asset('images/logo.png')}} alt="Logo" class="logo"></a>
-            <ul class="main-nav js--main-nav">
-                <li><a href="{{ url('index') }}">Home</a></li>
-                <li><a href="{{ url('legacy') }}">Legacy</a></li>
-                <li><a href="{{ url('gallery') }}">Gallery</a></li>
-                <li><a class="dropbtn" href="{{ url('whatsnew') }}">What's New</a></li>
-                <div class="dropdown-content">
-                    <a href="#">Calendar</a>
-                    <a href="#">Events</a>
-                </div>
-                <li><a href="{{ url('getinvolved') }}">Get Involved</a></li>
-                <li><a href="{{ url('contact') }}">Contact</a></li>
-            </ul>
-            <!-- Right Side Of Navbar -->
-            <ul class="main-nav-auth js--main-nav">
+    <div class="row row-nav">
+        <a class="logo-link" href="{{ url('index') }}"><img src={{ URL::asset('images/logo_opt.png')}} alt="Logo" class="logo-responsive"></a>
+
+        <div id="nav-icon" class="menu-icon">
+            <div class="menu-icon-top"></div>
+            <div class="menu-icon-middle"></div>
+            <div class="menu-icon-bottom"></div>
+        </div>
+
+
+        <ul class="navigation js--main-nav">
+            <div><a class="logo-link" href="{{ url('index') }}"><img src={{ URL::asset('images/logo_opt.png')}} alt="Logo" class="logo"></a></div>
+            <li><a href="{{ url('index') }}">Home</a></li>
+            <li class="dropdown"><a href="{{ url('whatsnew') }}">What's New</a></li>
+            <div class="dropdown-content">
+                <a href="{{ url('whatsnew') }}">Calendar</a>
+                <a href="{{ url('whatsnew') }}">Events</a>
+            </div>
+            </li>
+            <li><a href="{{ url('legacy') }}">Legacy</a></li>
+            <li><a href="{{ url('getinvolved') }}">Get Involved</a></li>
+            <li><a href="{{ url('gallery') }}">Gallery</a></li>
+            <li><a href="{{ url('contact') }}">Contact</a></li>
+        </ul>
+            <ul class="navigation-auth">
                 <!-- Authentication Links -->
                 @if (Auth::guest())
                     <li><a href="{{ url('/login') }}">Login</a></li>
@@ -62,8 +68,7 @@
                     </li>
                 @endif
             </ul>
-        </div>
-    </nav>
+    </div>
     @yield('content')
 </header>
     @yield('main-body')
@@ -72,6 +77,7 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{ asset('/js/bootstrap.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/js/script.js') }}"></script>
 </body>
 </html>

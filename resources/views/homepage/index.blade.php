@@ -1,7 +1,30 @@
 @extends('master')
+
+<link href="{{ asset('/css/carousel.css') }}" rel="stylesheet">
+
 @section('content')
-    <div class="header-image">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="first-slide" src="{{ asset('/images/Carousel4.jpg') }}" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="second-slide" src="{{ asset('/images/Carousel3.jpg') }}" alt="Second slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
     </div>
+
     <div class="header-background">
         <h1>Become a Ray of Sunshine Today!</h1>
         <a class="btn btn-full js--scroll-to-plans" href="#">Get Involved</a>
@@ -11,7 +34,6 @@
 
 @section('main-body')
 <section class="section-features" id="features">
-    <div class="row wrap">
         <h2>Who We Are</h2>
         <p class="long-copy">
             Allison "Allie Sunshine" Hayes was a beautiful, generous, loving, caring, giving,
@@ -28,12 +50,10 @@
             wellness explorers through creating and participating in projects in our community that nurture
             self healing and capture learning opportunities for our minds, bodies, and spirits.
         </p>
-        <a class="btn btn-full js--scroll-to-plans" href="{{ url('legacy') }}">Learn More</a>
-    </div>
+        <a class="btn btn-full btn-mobile" href="{{ url('legacy') }}">Learn More</a>
 </section>
 
 <section class="section-features section-get-involved" id="features">
-    <div class="row wrap">
         <h2>How to Get Involved</h2>
         <p class="long-copy">
             We are always looking new people to be apart of the Allie Sunshine Project!
@@ -41,7 +61,10 @@
             or if you have a wonderful idea that you would like to share with the Allie
             Sunshine Project.
         </p>
-    </div>
+</section>
+
+<section class="footer">
+        <p>Copyright 2018 The Allie Sunshine Project | Developed by Parallax Web Design</p>
 </section>
 @endsection
 

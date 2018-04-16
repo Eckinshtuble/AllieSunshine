@@ -18,6 +18,10 @@ Route::get('getinvolved', function (){
     return view('get-involved/getinvolved');
 });
 
+Route::get('calendar', function (){
+    return view('calendar/calendar');
+});
+
 Route::get('blog', function (){
     return view('blog/blog');
 });
@@ -41,5 +45,5 @@ Route::resource('whatsnew', 'BlogPostController');
 //Auth Routes
 Auth::routes();
 
-Route::get('login/google', 'Auth\LoginController@redirectToProvider');
-Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');

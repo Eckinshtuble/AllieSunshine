@@ -35,4 +35,15 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+        'client_id' => '205766463363276',
+        'client_secret' => 'da2f8dffda96ecab47063915839fd13b',
+        'redirect' => 'https://mcipriano.scweb.ca/AllieSunshine/login/facebook/callback',
+    ],
+    
+    'google' => [
+        'client_id' => '208074352257-meflhk8p9r75nadnlsm1ttf4nod1kplc.apps.googleusercontent.com',
+        'client_secret' => 'cJgZYsbFlw7ZdIHWgMMvMfxg',
+        'redirect' => 'https://mcipriano.scweb.ca/AllieSunshine/login/google/callback',
+    ],
 ];
