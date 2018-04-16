@@ -5,17 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use DB;
-use App\Blog_Post;
+use App\BlogPost;
+use App\Http\Requests\BlogPostRequest;
 
 class BlogPostController extends Controller
 {
     public function index(){
-        $blog_posts = blog_post::all();
+        $blog_posts = BlogPost::all();
         return view('whatsnew.index', compact("blog_posts"));
     }
 
     public function show($blog_post){
-        $blog_post = blog_post::find($blog_post);
+        $blog_post = BlogPost::find($blog_post);
         return view('whatsnew.show', compact("blog_post"));
     }
 
@@ -23,34 +24,34 @@ class BlogPostController extends Controller
         return view('whatsnew.create');
     }
 
-    public function store(Blog_PostRequest $request){
+    public function store(BlogPostRequest $request){
         $formData = $request->all();
 
-        Blog_Post::create($formData);
+        BlogPost::create($formData);
 
-        return redirect('blog_posts');
+        return redirect('whatsnew');
     }
 
     public function edit($blog_post){
-        $blog_post = Blog_Post::findOrFail($blog_post);
+        $blog_post = BlogPost::findOrFail($blog_post);
 
         return view('whatsnew.edit', compact("blog_post"));
     }
 
-    public function update(Blog_PostRequest $request, $blog_post){
+    public function update(BlogPostRequest $request, $blog_post){
         $formData = $request->all();
-        $blog_post = Blog_Post::findOrFail($blog_post);
+        $blog_post = BlogPost::findOrFail($blog_post);
         $blog_post->update($formData);
 
-        return redirect('blog_posts');
+        return redirect('whatsnew');
     }
 
     public function __construct(){
         $this->middleware('auth', ['only' =>['create', 'edit', 'destroy']]);
     }
 
-    public function destroy(Blog_Post $blog_Post){
+    public function destroy(BlogPost $blog_Post){
         $blog_Post->delete();
-        return redirect('blog_posts');
+        return redirect('whatsnew');
     }
 }

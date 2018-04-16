@@ -4,31 +4,43 @@
 </head>
 @section('main-body')
     <h2>What's New</h2>
+    <a href="{{ url('whatsnew/create') }}" >&nbsp&nbsp[Create New]</a>
     <section class="section-features" id="features">
-
-        <h1>All Articles</h1>
-
         @foreach ($blog_posts as $blog_post)
             <div class="wrapper">
                 <div class="one">
                     <h3>{{ $blog_post->blog_post_title }}</h3>
                     <br/>
-                    <img src="{{ $blog_post->blog_post_images->featured_image }} " class="image">
+                   
                 </div>
                 <div class="two">
                     <hr class="hrtag">
                     <br />
                         <p> {{ $blog_post->blog_post_body }} </p>
                         <br />
-                        <button>Read more</button>
-                    </div>
+                        <button>More</button>
+                    &nbsp &nbsp
+                    <a href="{{ action('BlogPostController@edit', $blog_post->id) }}">[Edit]</a>
+
+
                 </div>
-                <br />
+                </div>
+                <br /><br />
+
+            <form method="post" action="{{ action('BlogPostController@destroy', $blog_post->id) }}">
+                {{ method_field('DELETE') }}
+                {{ csrf_field() }}
+
+               <button type="submit" id="delete">Delete</button>
+            </form>
+            <br />
+            <br />
                 <br />
                 <hr />
                 <br />
                 <br />
 
         @endforeach
+
     </section>
 @endsection
