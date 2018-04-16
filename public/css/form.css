@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+}
+
+input {
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    color: #ffe607;
+    -webkit-transition: border 0.3s, color 0.3s;
+    transition: border 0.3s, color 0.3s;
+    text-decoration: none;
+    width: 500px;
+}

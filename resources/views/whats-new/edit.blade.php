@@ -1,11 +1,11 @@
 @extends('master')
 @section('main-body')
-    <h1>Edit Article</h1>
+    <h2>Edit</h2>
 
     <form method="POST" action="{{
-    action('BlogPostController@update', $blog_post->blog_post_id) }}">
+    action('BlogPostController@update', $blog_post->id) }}">
         {{ method_field('PATCH') }}
-        @include('partials.edit_form', ['buttonName' => 'Edit', 'title' => old('title'), 'body' => old('body')])
+        @include('partials.blog_form', ['buttonName' => 'Edit', 'blog_post_title' => old('blog_post_title'), 'blog_post_body' => old('blog_post_body')])
     </form>
     @include('partials.errors')
 @endsection
