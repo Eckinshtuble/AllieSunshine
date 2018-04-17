@@ -146,6 +146,24 @@
         float: none;
         width: 100%;
     }
+
+    .header-background {
+        top: 40%;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .logo-content {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer p {
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -156,10 +174,6 @@
 
     .btn-mobile {
         margin-left: 20px;
-    }
-
-    .footer {
-        font-size: 14px;
     }
 
     .header-background {
@@ -217,11 +231,32 @@
     h2 {
         font-size: 1.5rem;
     }
+
+    .header-background {
+        top: 40%;
+    }
+
+    .footer p {
+        font-size: 15px;
+        padding: 10px 0 20px 0;
+    }
+
+    .logo-content img {
+        width: 40px;
+        height: 40px;
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .header-background {
+        top: 30%;
+    }
 }
 
 @media only screen and (max-width: 480px) {
     .header-background {
-        margin-top: -50px;
+        top: 30%;
     }
 
     .long-copy {

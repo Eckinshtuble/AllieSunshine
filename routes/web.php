@@ -39,7 +39,13 @@ Route::get('contact', function (){
 });
 
 //Blog Routes
-Route::resource('whatsnew', 'BlogPostController');
+Route::get('whatsnew', 'BlogPostController@index');
+Route::get('whatsnew/create', 'BlogPostController@create');
+Route::post('whatsnew', 'BlogPostController@store');
+Route::get('whatsnew/{blog_post}', 'BlogPostController@show');
+Route::get('whatsnew/{blog_post}/edit', 'BlogPostController@edit');
+Route::patch('whatsnew/{blog_post}', 'BlogPostController@update');
+Route::delete('whatsnew/{blog_post}', 'BlogPostController@destroy');
 
 
 //Auth Routes
