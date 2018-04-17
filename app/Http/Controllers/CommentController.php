@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use DB;
-use App\Blog_Post;
+use App\BlogPost;
 use App\Comment;
 
 class CommentController extends Controller
