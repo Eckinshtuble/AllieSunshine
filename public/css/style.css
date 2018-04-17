@@ -360,7 +360,7 @@ h2:after {
 	-webkit-flex-flow: row wrap;
 	justify-content: flex-end;
 	align-items: center;
-	width: 15%;
+	width: 25%;
 	padding-right: 20px;
 
 }
@@ -378,13 +378,20 @@ h2:after {
 	background: darken(deepskyblue, 2%);
 }
 
-.footer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.logo-content {
+	float: left;
+}
+
+.logo-content img {
+	padding: 25px 2px;
+}
+
+.logo-inst {
+	margin-left: 15px;
 }
 
 .footer p {
+	margin-left: 25%;
 	padding: 40px 0;
 }
 

@@ -62,9 +62,5 @@
             Sunshine Project.
         </p>
 </section>
-
-<section class="footer">
-        <p>Copyright 2018 The Allie Sunshine Project | Developed by Parallax Web Design</p>
-</section>
 @endsection
 
