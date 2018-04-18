@@ -1,12 +1,13 @@
-<<<<<<< HEAD
-<link href="{{ asset('/css/blogshow.css') }}" rel="stylesheet">
 @extends('master')
+
+<link href="{{ asset('/css/blogshow.css') }}" rel="stylesheet">
+
 @section('main-body')
     <div id="blogPostId">
 
         <br />
         <h2>{{$blog_post->blog_post_title}}</h2>
-       <p id="backarrow"><a id="whatsnewlink" href="{{ url('whatsnew') }}"> &larr; </a></p>
+        <p id="backarrow"><a id="whatsnewlink" href="{{ url('whatsnew') }}"> &larr; </a></p>
         <br />
         <br/>
         <br/>
@@ -15,26 +16,5 @@
         <p id="showbody">{{$blog_post->blog_post_body}}</p>
         <br />
 
-=======
-@extends('master')
-@section('main-body')
-    <div id="blogPostId">
-        <h1>Article #: {{$blog_post->id}}</h1>
-        <br />
-        {{'Name: '.$blog_post->blog_post_title}}
-        <br />
-        {{'Body: '.$blog_post->blog_post_body}}
-        <br />
->>>>>>> 398a19e61247b4f190b72aa912a5768590d54a84
-        <br />
     </div>
-    <br/>
-    <br/>
-<<<<<<< HEAD
-  
 @endsection
-=======
-
-
-@endsection
->>>>>>> 398a19e61247b4f190b72aa912a5768590d54a84
