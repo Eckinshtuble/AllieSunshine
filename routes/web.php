@@ -40,12 +40,16 @@ Route::get('contact', function (){
 
 //Blog Routes
 Route::get('whatsnew', 'BlogPostController@index');
-Route::get('whatsnew/create', 'BlogPostController@create');
+
+Route::group(['middleware' => 'App\Http\Middleware\Admin'], function() {
+    Route::get('whatsnew/create', 'BlogPostController@create');
+    Route::get('whatsnew/{blog_post}/edit', 'BlogPostController@edit');
+    Route::patch('whatsnew/{blog_post}', 'BlogPostController@update');
+    Route::delete('whatsnew/{blog_post}', 'BlogPostController@destroy');
+});
+
 Route::post('whatsnew', 'BlogPostController@store');
 Route::get('whatsnew/{blog_post}', 'BlogPostController@show');
-Route::get('whatsnew/{blog_post}/edit', 'BlogPostController@edit');
-Route::patch('whatsnew/{blog_post}', 'BlogPostController@update');
-Route::delete('whatsnew/{blog_post}', 'BlogPostController@destroy');
 
 
 //Auth Routes

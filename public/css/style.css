@@ -180,18 +180,6 @@ h2 {
     margin: 0 auto;
 }
 
-.container > img {
-	padding: 5px;
-	width: 305px;
-	height: 250px;
-	transition: transform .6s;
-	image-orientation: from-image;
-}
-
-.container > img:hover {
-	transform: scale(1.2);
-}
-
 
 /* BUTTONS */
 
@@ -399,4 +387,5 @@ h2:after {
 .btn-mobile {
 	margin-left: 22%;
 }
+
 
