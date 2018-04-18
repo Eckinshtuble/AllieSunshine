@@ -1,8 +1,16 @@
 @extends('master')
 
 <link href="{{ asset('/css/carousel.css') }}" rel="stylesheet">
+<link href="{{ asset('/css/alert.css') }}" rel="stylesheet">
 
 @section('content')
+    @if (\Session::has('fail'))
+        <div class="alert alert-danger">
+            <ul>
+                <li>{!! \Session::get('fail') !!}</li>
+            </ul>
+        </div>
+    @endif
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
