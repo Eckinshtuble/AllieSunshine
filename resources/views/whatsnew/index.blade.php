@@ -4,7 +4,7 @@
 </head>
 @section('main-body')
     <h2>What's New</h2>
-    <a href="{{ url('whatsnew/create') }}" >&nbsp&nbsp[Create New]</a>
+    <p id="createid"><a href="{{ url('whatsnew/create') }}" >[Create New]</a></p>
     <section class="section-features" id="features">
         @foreach ($blog_posts as $blog_post)
             <div class="wrapper">
@@ -16,22 +16,27 @@
                 <div class="two">
                     <hr class="hrtag">
                     <br />
-                        <p> {{ $blog_post->blog_post_body }} </p>
+                        <p> {{ substr($blog_post->blog_post_body, 0, 350)}} ...</p>
                         <br />
-                        <button>More</button>
-                    &nbsp &nbsp
-                    <a href="{{ action('BlogPostController@edit', $blog_post->id) }}">[Edit]</a>
+                    <br />
+                   <button id="readbutton"> <a id="showlink" href="{{ url('whatsnew/'.$blog_post->id) }}">Read More</a></button>
+                    <br/>
+
+                    <br/>
+
 
 
                 </div>
                 </div>
                 <br /><br />
-
+            <button class="adminbutton"><a href="{{ action('BlogPostController@edit', $blog_post->id) }}">Edit</a></button>
+        <br />
+        <br />
             <form method="post" action="{{ action('BlogPostController@destroy', $blog_post->id) }}">
                 {{ method_field('DELETE') }}
                 {{ csrf_field() }}
 
-               <button type="submit" id="delete">Delete</button>
+               <button type="submit" class="adminbutton">Delete</button>
             </form>
             <br />
             <br />

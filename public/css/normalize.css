@@ -240,8 +240,7 @@ svg:not(:root) {
 button,
 input,
 optgroup,
-select,
-textarea {
+select {
   font-family: sans-serif; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
@@ -338,13 +337,6 @@ progress {
   vertical-align: baseline; /* 2 */
 }
 
-/**
- * Remove the default vertical scrollbar in IE.
- */
-
-textarea {
-  overflow: auto;
-}
 
 /**
  * 1. Add the correct box sizing in IE 10-.

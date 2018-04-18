@@ -50,8 +50,8 @@ class BlogPostController extends Controller
         $this->middleware('auth', ['only' =>['create', 'edit', 'destroy']]);
     }
 
-    public function destroy(BlogPost $blog_Post){
-        $blog_Post->delete();
+    public function destroy(BlogPost $blog_post){
+        $blog_post->delete();
         return redirect('whatsnew');
     }
 }

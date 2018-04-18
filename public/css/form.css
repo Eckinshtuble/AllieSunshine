@@ -14,3 +14,13 @@ input {
     text-decoration: none;
     width: 500px;
 }
+
+textarea{
+    width: 500px;
+    height: 150px;
+    overflow: auto;
+    font-family: sans-serif; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+}

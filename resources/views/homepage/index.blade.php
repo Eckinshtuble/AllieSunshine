@@ -1,4 +1,8 @@
 @extends('master')
+<<<<<<< HEAD
+@section('content')
+    <div class="header-image">
+=======
 
 <link href="{{ asset('/css/carousel.css') }}" rel="stylesheet">
 <link href="{{ asset('/css/alert.css') }}" rel="stylesheet">
@@ -31,8 +35,8 @@
         <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </a>
+>>>>>>> 398a19e61247b4f190b72aa912a5768590d54a84
     </div>
-
     <div class="header-background">
         <h1>Become a Ray of Sunshine Today!</h1>
         <a class="btn btn-full js--scroll-to-plans" href="#">Get Involved</a>
@@ -42,6 +46,7 @@
 
 @section('main-body')
 <section class="section-features" id="features">
+    <div class="row wrap">
         <h2>Who We Are</h2>
         <p class="long-copy">
             Allison "Allie Sunshine" Hayes was a beautiful, generous, loving, caring, giving,
@@ -58,10 +63,12 @@
             wellness explorers through creating and participating in projects in our community that nurture
             self healing and capture learning opportunities for our minds, bodies, and spirits.
         </p>
-        <a class="btn btn-full btn-mobile" href="{{ url('legacy') }}">Learn More</a>
+        <a class="btn btn-full js--scroll-to-plans" href="{{ url('legacy') }}">Learn More</a>
+    </div>
 </section>
 
 <section class="section-features section-get-involved" id="features">
+    <div class="row wrap">
         <h2>How to Get Involved</h2>
         <p class="long-copy">
             We are always looking new people to be apart of the Allie Sunshine Project!
@@ -69,6 +76,10 @@
             or if you have a wonderful idea that you would like to share with the Allie
             Sunshine Project.
         </p>
+<<<<<<< HEAD
+    </div>
+=======
+>>>>>>> 398a19e61247b4f190b72aa912a5768590d54a84
 </section>
 @endsection
 
