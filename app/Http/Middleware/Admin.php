@@ -17,7 +17,7 @@ class Admin
     {
         if ($request->user()->admin() != 1)
         {
-            return redirect('/')->with('fail', 'You are unauthorized to view that page.');
+            return redirect('/')->with('fail', 'You are not authorized to view that page.');
         }
 
         return $next($request);
