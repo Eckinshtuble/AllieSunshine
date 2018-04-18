@@ -16,6 +16,7 @@
     width: 200px;
     margin: .5vw;
 }
+
 .container div img {
     padding: 5px;
     width: 100%;
@@ -26,9 +27,24 @@
 .container div img:hover {
     transition: 0.5s;
     opacity: 0.8;
+<<<<<<< HEAD
+=======
+    transform: scale(1.2);
 }
+
+@media screen and (max-width: 767px) {
+    .container div img:hover {
+        transform: scale(1.05);
+    }
+>>>>>>> 398a19e61247b4f190b72aa912a5768590d54a84
+}
+
 @media screen and (max-width: 400px) {
+<<<<<<< HEAD
     .container div { margin: 0; }
+=======
+    .container div { margin: 0; padding: 0 10px; }
+>>>>>>> 398a19e61247b4f190b72aa912a5768590d54a84
     .container { padding: 0; }
 
 }

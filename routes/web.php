@@ -35,6 +35,20 @@ Route::get('contact', function (){
 });
 
 //Blog Routes
+<<<<<<< HEAD
+=======
+Route::get('whatsnew', 'BlogPostController@index');
+
+Route::group(['middleware' => 'App\Http\Middleware\Admin'], function() {
+    Route::get('whatsnew/create', 'BlogPostController@create');
+    Route::get('whatsnew/{blog_post}/edit', 'BlogPostController@edit');
+    Route::patch('whatsnew/{blog_post}', 'BlogPostController@update');
+    Route::delete('whatsnew/{blog_post}', 'BlogPostController@destroy');
+});
+
+Route::post('whatsnew', 'BlogPostController@store');
+Route::get('whatsnew/{blog_post}', 'BlogPostController@show');
+>>>>>>> 398a19e61247b4f190b72aa912a5768590d54a84
 
 
 Route::get('whatsnew', 'BlogPostController@index');

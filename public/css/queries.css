@@ -75,6 +75,51 @@
         padding: 10px 0;
         font-size: 100%;
     }
+<<<<<<< HEAD
+=======
+    */
+
+
+
+    .wrapper {
+        float: none;
+        width: 100%;
+    }
+
+    .header-background {
+        top: 40%;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .logo-content {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer p {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    .long-copy {
+        width: 70%;
+    }
+
+    .btn-mobile {
+        margin-left: 20px;
+    }
+
+    .header-background {
+        font-size: 14px;
+    }
+
+>>>>>>> 398a19e61247b4f190b72aa912a5768590d54a84
 }
 
 @media only screen and (max-width: 767px) {
@@ -102,6 +147,7 @@
     .box--margin-top {
         margin-top: 40px;
     }
+<<<<<<< HEAD
     
 }
 
@@ -109,6 +155,102 @@
 	.main-nav, .main-nav-auth {
         display: none;
 	}
+=======
+    .logo {
+        margin-left: -20px;
+    }
+
+    #email, #password {
+        width: 50%;
+        font-size: 14px;
+    }
+
+    .btn-login {
+        width: 50%;
+        font-size: 14px;
+    }
+
+    .google {
+        width: 50%;
+        font-size: 14px;
+    }
+
+    .facebook {
+        width: 50%;
+        font-size: 14px;
+    }
+
+    .btn-pw-reset {
+        font-size: 14px;
+        margin-left: 27%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .header-background {
+        top: 40%;
+    }
+
+    .footer p {
+        font-size: 15px;
+        padding: 10px 0 20px 0;body { margin: 0; background: #333; }
+    header {
+        padding: .5vw;
+        font-size: 0;
+        display: -ms-flexbox;
+        -ms-flex-wrap: wrap;
+        -ms-flex-direction: column;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        display: -webkit-box;
+        display: flex;
+    }
+    header div {
+        -webkit-box-flex: auto;
+        -ms-flex: auto;
+        flex: auto;
+        width: 200px;
+        margin: .5vw;
+    }
+    header div img {
+        width: 100%;
+        height: auto;
+    }
+    @media screen and (max-width: 400px) {
+        header div { margin: 0; }
+        header { padding: 0; }
+
+    }
+    }
+
+    .logo-content img {
+        width: 40px;
+        height: 40px;
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .header-background {
+        top: 30%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header-background {
+        top: 30%;
+    }
+
+    .long-copy {
+        width: 90%;
+    }
+
+    .footer {
+        font-size: 9px;
+    }
+>>>>>>> 398a19e61247b4f190b72aa912a5768590d54a84
     
     .mobile-nav-icon {
 		display: inline-block;
@@ -119,6 +261,7 @@
         color: black;
     }
 
+<<<<<<< HEAD
 	.main-nav {
 		float: none;
 		margin: 0;
@@ -147,6 +290,8 @@
     .main-nav li a, .main-nav-auth li a {
         color: white;
     }
+=======
+>>>>>>> 398a19e61247b4f190b72aa912a5768590d54a84
 }
 
 /*---------------------*/

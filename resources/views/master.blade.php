@@ -67,9 +67,13 @@
     @yield('content')
 </header>
     @yield('main-body')
-<footer>
-
-</footer>
+<section class="footer">
+    <div class="logo-content">
+        <a href="https://instagram.com"><img src={{ asset('/images/instagram.png')}} width="50" height="50" class="logo-inst" alt="Logo"></a>
+        <a href="https://facebook.com"><img src={{ asset('/images/facebook.png')}} width="50" height="50" alt="Logo"></a>
+    </div>
+        <p>Copyright 2018 The Allie Sunshine Project | Developed by Parallax Web Design</p>
+</section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="{{ asset('/js/script.js') }}"></script>

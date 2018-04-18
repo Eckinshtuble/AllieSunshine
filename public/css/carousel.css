@@ -28,6 +28,82 @@
     width: 100%;
 }
 
+@media only screen and (max-width: 1024px) {
+    .carousel {
+        height: 80%;
+    }
+
+    .first-slide {
+        height: 80%;
+        transform: scale(1.25);
+    }
+
+    .second-slide {
+        height: 80%;
+        transform: scale(1.25)
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .carousel {
+        height: 70%;
+    }
+
+    .first-slide {
+        height: 70%;
+        transform: scale(1.25);
+    }
+
+    .second-slide {
+        height: 70%;
+        transform: scale(1.25)
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .carousel {
+        height: 74%;
+    }
+
+    .first-slide {
+        height: 60%;
+        transform: scale(1.75);
+    }
+
+    .second-slide {
+        height: 60%;
+        transform: scale(1.75)
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .carousel {
+        height: 52%;
+    }
+
+    .first-slide {
+        height: 45%;
+    }
+
+    .second-slide {
+        height: 45%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .carousel {
+        height: 52%;
+    }
+
+    .first-slide {
+        height: 42%;
+    }
+
+    .second-slide {
+        height: 42%;
+    }
+}
+
 @media screen and (prefers-reduced-motion: reduce) {
     .carousel-item {
         transition: none;
