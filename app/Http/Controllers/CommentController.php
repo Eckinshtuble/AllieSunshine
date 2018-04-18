@@ -27,7 +27,7 @@ class CommentController extends Controller
     }
 
     public function store(Request $request) {
-        $blog_post = Blog_Post::find($request->blog_post_id);
+        $blog_post = BlogPost::find($request->blog_post_id);
         $comment = new Comment($request->all());
         $comment->id = 1;
         $comment->blog_post()->associate($blog_post)->save();

@@ -7,5 +7,7 @@
 <input name="blog_post_title" type="text" value="{{ $blog_post_title or '' }}"><br>
 <label for="blog_post_body">Body:</label>
 <br />
-<input name="blog_post_body" type="text" value="{{ $blog_post_body or '' }}"><br>
+<br />
+<textarea cols="25" rows="7" id="textbox" name="blog_post_body" type="text" value="{{ $blog_post_body or '' }}"></textarea><br>
+<br/>
 <button type="submit">&nbsp;{{ $buttonName  }}&nbsp;</button><br/>

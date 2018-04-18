@@ -5,87 +5,46 @@
     padding-bottom: 50px;
 }
 
-#email, #password, #first_name, #last_name {
-     display: block;
-     padding: 10px 30px;
-     font-weight: 200;
-     font-size: 16px;
-     color: navy;
-     -webkit-transition: border 0.3s, color 0.3s;
-     transition: border 0.3s, color 0.3s;
-     text-decoration: none;
-     width: 400px;
-     border-radius: 200px;
-     margin: 0 auto 5px auto;
-     height: 20px;
-     border: 1px solid #ffe607;
- }
-
-.btn-login {
-    display: block;
+input {
+    display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
-    color: navy;
+    color: #ffe607;
+    -webkit-transition: border 0.3s, color 0.3s;
+    transition: border 0.3s, color 0.3s;
+    text-decoration: none;
+    width: 500px;
+}
+
+.btn-login {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    color: #ffe607;
     background-color: transparent;
     -webkit-transition: border 0.3s, color 0.3s;
     transition: border 0.3s, color 0.3s;
     text-decoration: none;
     cursor: pointer;
-    width: 400px;
-    margin-bottom: 35px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 200px;
-    height: 20px;
-    border: 1px solid #ffe607;
-}
-
-.btn-login:hover {
-    background-color: #ffe607;
+    width: 150px;
+    float: left;
+    margin-top: -1px;
 }
 
 .google {
-    display: inline;
+    display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
-    color: ghostwhite;
-    background-color: orangered;
+    color: #ffe607;
+    background-color: transparent;
     -webkit-transition: border 0.3s, color 0.3s;
     transition: border 0.3s, color 0.3s;
     text-decoration: none;
     cursor: pointer;
-    width: 400px;
-    border: 1px solid orangered;
-    border-radius: 200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.facebook {
-    display: inline;
-    padding: 10px 30px;
-    font-weight: 300;
-    color: ghostwhite;
-    background-color: blue;
-    -webkit-transition: border 0.3s, color 0.3s;
-    transition: border 0.3s, color 0.3s;
-    text-decoration: none;
-    cursor: pointer;
-    width: 400px;
-    border: 1px solid blue;
-    border-radius: 200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.google:hover {
-    color: lightgray;
-    border: 1px solid orangered;
-}
-
-.facebook:hover {
-    color: lightgray;
-    border: 1px solid blue;
+    width: 250px;
+    border: 1px solid lightgray;
+    float: right;
+    margin-bottom: 10px;
 }
 
 .form-login {
@@ -100,23 +59,12 @@ input:focus {
     outline: none;
 }
 
-.fgt-pw {
+.buttons {
     clear: both;
     text-align: left;
-    margin-top: 35px;
-    width: 200px;
-    margin-left: 20px;
-}
-
-.no-account {
-    border-top: 1px solid lightgray;
-    width: 450px;
-    margin: 15px auto;
-    padding-top: 15px;
 }
 
 .wrapper-inner {
     width: 500px;
     margin: 0 auto;
-    text-align: center;
 }

@@ -18,10 +18,6 @@ Route::get('getinvolved', function (){
     return view('get-involved/getinvolved');
 });
 
-Route::get('calendar', function (){
-    return view('calendar/calendar');
-});
-
 Route::get('blog', function (){
     return view('blog/blog');
 });
@@ -39,11 +35,20 @@ Route::get('contact', function (){
 });
 
 //Blog Routes
-Route::resource('whatsnew', 'BlogPostController');
 
+
+Route::get('whatsnew', 'BlogPostController@index');
+Route::get('whatsnew/create', 'BlogPostController@create');
+Route::post('whatsnew', 'BlogPostController@store');
+Route::get('whatsnew/{blog_post}', 'BlogPostController@show');
+Route::get('whatsnew/{blog_post}/edit', 'BlogPostController@edit');
+Route::patch('whatsnew/{blog_post}', 'BlogPostController@update');
+Route::delete('whatsnew/{blog_post}', 'BlogPostController@destroy');
 
 //Auth Routes
 Auth::routes();
 
-Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
-Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
+Route::get('login/google', 'Auth\LoginController@redirectToProvider');
+Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback');
+
+Route::get('/home', 'HomeController@index');
