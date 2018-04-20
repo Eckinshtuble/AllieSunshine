@@ -181,6 +181,11 @@
         font-size: 14px;
     }
 
+    .footer-text {
+        display: block;
+        padding-bottom: 25px;
+    }
+
 }
 
 

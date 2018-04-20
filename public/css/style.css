@@ -367,21 +367,24 @@ h2:after {
 	background: darken(deepskyblue, 2%);
 }
 
-.logo-content {
-	float: left;
+.footer {
+	text-align: center;
 }
 
-.logo-content img {
-	padding: 25px 2px;
-}
-
-.logo-inst {
-	margin-left: 15px;
-}
-
-.footer p {
-	margin-left: 25%;
+.footer-content p {
 	padding: 40px 0;
+}
+
+.footer-content a:hover {
+	border: none;
+}
+
+.footer-content img {
+	vertical-align: middle;
+}
+
+.footer-content .logo-inst {
+	margin-left: 20px;
 }
 
 
