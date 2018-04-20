@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<link href="{{ asset('/css/blogshow.css') }}" rel="stylesheet">
-=======
->>>>>>> 0cd7126fa321efb9f2634c1b8c2365f0107f2abe
 @extends('master')
 
 <link href="{{ asset('/css/blogshow.css') }}" rel="stylesheet">
@@ -21,10 +17,5 @@
             {!!  nl2br(e($blog_post->blog_post_body)) !!}
         </div>
         <br />
-<<<<<<< HEAD
 </div>
-=======
-
-    </div>
->>>>>>> 0cd7126fa321efb9f2634c1b8c2365f0107f2abe
 @endsection

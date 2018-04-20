@@ -25,18 +25,13 @@
 
                     <br/>
 
-
-
                 </div>
                 </div>
                 <br /><br />
-<<<<<<< HEAD
-            <a id="edit" href="{{ action('BlogPostController@edit', $blog_post->id) }}"><button class="adminbutton">Edit</button></a>
-=======
             @if(Auth::check() && Auth::user()->admin())
-                <button class="adminbutton"><a href="{{ action('BlogPostController@edit', $blog_post->id) }}">Edit</a></button>
+                <button class="adminbutton"> <a id="edit" href="{{ action('BlogPostController@edit', $blog_post->id) }}"><button class="adminbutton">Edit</button></a>
             @endif
->>>>>>> 0cd7126fa321efb9f2634c1b8c2365f0107f2abe
+
         <br />
         <br />
             <form method="post" action="{{ action('BlogPostController@destroy', $blog_post->id) }}">
