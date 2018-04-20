@@ -1,8 +1,4 @@
 @extends('master')
-<<<<<<< HEAD
-@section('content')
-    <div class="header-image">
-=======
 
 <link href="{{ asset('/css/carousel.css') }}" rel="stylesheet">
 <link href="{{ asset('/css/alert.css') }}" rel="stylesheet">
@@ -23,10 +19,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="first-slide" src="{{ asset('/images/Carousel4.jpg') }}" alt="First slide">
+                <img class="first-slide" src="{{ asset('/images/Carousel1_opt.jpg') }}" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="second-slide" src="{{ asset('/images/Carousel3.jpg') }}" alt="Second slide">
+                <img class="second-slide" src="{{ asset('/images/Carousel4.jpg') }}" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="third-slide" src="{{ asset('/images/Carousel3_opt.jpg') }}" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -35,8 +34,8 @@
         <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </a>
->>>>>>> 398a19e61247b4f190b72aa912a5768590d54a84
     </div>
+
     <div class="header-background">
         <h1>Become a Ray of Sunshine Today!</h1>
         <a class="btn btn-full js--scroll-to-plans" href="#">Get Involved</a>
@@ -45,8 +44,7 @@
 @endsection
 
 @section('main-body')
-<section class="section-features" id="features">
-    <div class="row wrap">
+    <section class="section-features" id="features">
         <h2>Who We Are</h2>
         <p class="long-copy">
             Allison "Allie Sunshine" Hayes was a beautiful, generous, loving, caring, giving,
@@ -63,12 +61,10 @@
             wellness explorers through creating and participating in projects in our community that nurture
             self healing and capture learning opportunities for our minds, bodies, and spirits.
         </p>
-        <a class="btn btn-full js--scroll-to-plans" href="{{ url('legacy') }}">Learn More</a>
-    </div>
-</section>
+        <a class="btn btn-full btn-mobile" href="{{ url('legacy') }}">Learn More</a>
+    </section>
 
-<section class="section-features section-get-involved" id="features">
-    <div class="row wrap">
+    <section class="section-features section-get-involved" id="features">
         <h2>How to Get Involved</h2>
         <p class="long-copy">
             We are always looking new people to be apart of the Allie Sunshine Project!
@@ -76,10 +72,5 @@
             or if you have a wonderful idea that you would like to share with the Allie
             Sunshine Project.
         </p>
-<<<<<<< HEAD
-    </div>
-=======
->>>>>>> 398a19e61247b4f190b72aa912a5768590d54a84
-</section>
+    </section>
 @endsection
-
