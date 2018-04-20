@@ -56,7 +56,7 @@
                 <li><a href="{{ url('/login') }}">Login</a></li>
                 <li><a href="{{ url('/register') }}">Register</a></li>
             @else
-                <li><a href="#">{{"Welcome, " . Auth::user()->first_name }}</a></li>
+                <li><a href="{{ url('userprofile') }}">{{"Welcome, " . Auth::user()->first_name }}</a></li>
                 <li>
                     <a href="{{ url('/logout') }}" onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">
@@ -73,11 +73,12 @@
 </header>
 @yield('main-body')
 <section class="footer">
-    <div class="logo-content">
+    <div class="footer-content">
+        <p><span class="footer-text">Copyright 2018 The Allie Sunshine Project | Developed by Parallax Web Design</span>
         <a href="https://instagram.com"><img src={{ asset('/images/instagram.png')}} width="50" height="50" class="logo-inst" alt="Logo"></a>
         <a href="https://facebook.com"><img src={{ asset('/images/facebook.png')}} width="50" height="50" alt="Logo"></a>
+        </p>
     </div>
-    <p>Copyright 2018 The Allie Sunshine Project | Developed by Parallax Web Design</p>
 </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

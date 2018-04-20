@@ -37,6 +37,7 @@ Route::get('contact', function (){
 //Blog Routes
 
 Route::get('whatsnew', 'BlogPostController@index');
+Route::get('userprofile', 'HomeController@index');
 
 Route::group(['middleware' => 'App\Http\Middleware\Admin'], function() {
     Route::get('whatsnew/create', 'BlogPostController@create');
@@ -48,10 +49,17 @@ Route::group(['middleware' => 'App\Http\Middleware\Admin'], function() {
 Route::post('whatsnew', 'BlogPostController@store');
 Route::get('whatsnew/{blog_post}', 'BlogPostController@show');
 
+Route::get('userprofile/create', 'HomeController@create');
+Route::post('userprofile', 'HomeController@store');
+Route::get('userprofile/{user_info}/edit', 'HomeController@edit');
+Route::get('userprofile/{user_info}', 'HomeController@show');
+Route::patch('userprofile/{user_info}', 'HomeController@update');
+Route::delete('userprofile/{user_info}', 'HomeController@destroy');
+
 //Auth Routes
 Auth::routes();
 
-Route::get('login/google', 'Auth\LoginController@redirectToProvider');
-Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
+Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/home', 'HomeController@index');

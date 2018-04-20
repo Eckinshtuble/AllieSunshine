@@ -11,7 +11,6 @@
             </ul>
         </div>
     @endif
-    <div class="carousel-gradient"></div>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -20,10 +19,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="first-slide" src="{{ asset('/images/Carousel4.jpg') }}" alt="First slide">
+                <img class="first-slide" src="{{ asset('/images/Carousel1_opt.jpg') }}" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="second-slide" src="{{ asset('/images/Carousel3_opt.jpg') }}" alt="Second slide">
+                <img class="second-slide" src="{{ asset('/images/Carousel4.jpg') }}" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="third-slide" src="{{ asset('/images/Carousel3_opt.jpg') }}" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
