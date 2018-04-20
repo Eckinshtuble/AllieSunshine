@@ -39,7 +39,7 @@
     <div class="header-background">
         <h1>Become a Ray of Sunshine Today!</h1>
         <a class="btn btn-full js--scroll-to-plans" href="#">Get Involved</a>
-        <a class="btn btn-full js--scroll-to-start" href="#">Donate</a>
+        <a class="btn btn-full js--scroll-to-start" href="donate">Donate</a>
     </div>
 @endsection
 
