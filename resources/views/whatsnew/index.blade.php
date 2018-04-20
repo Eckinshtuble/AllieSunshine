@@ -1,8 +1,7 @@
 @extends('master')
-<head>
-    <link href="{{ asset('css/whatsnew.css') }}" rel="stylesheet">
-</head>
+
 @section('main-body')
+    <link href="{{ asset('css/whatsnew.css') }}" rel="stylesheet">
     <h2>What's New</h2>
     <p id="createid"><a href="{{ url('whatsnew/create') }}" >[Create New]</a></p>
     <section class="section-features" id="features">
@@ -19,7 +18,7 @@
                         <p> {{ substr($blog_post->blog_post_body, 0, 350)}} ...</p>
                         <br />
                     <br />
-                   <button id="readbutton"> <a id="showlink" href="{{ url('whatsnew/'.$blog_post->id) }}">Read More</a></button>
+                    <a id="showlink" href="{{ url('whatsnew/'.$blog_post->id) }}"><button id="readbutton"> Read More</button></a>
                     <br/>
 
                     <br/>
@@ -29,7 +28,7 @@
                 </div>
                 </div>
                 <br /><br />
-            <button class="adminbutton"><a href="{{ action('BlogPostController@edit', $blog_post->id) }}">Edit</a></button>
+            <a id="edit" href="{{ action('BlogPostController@edit', $blog_post->id) }}"><button class="adminbutton">Edit</button></a>
         <br />
         <br />
             <form method="post" action="{{ action('BlogPostController@destroy', $blog_post->id) }}">

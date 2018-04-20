@@ -5,9 +5,17 @@
     grid-auto-rows: minmax(100px, auto);
 }
 
-a{
+#edit:hover,
+#edit:active {
     text-decoration: none;
-    color: inherit;
+    color: #555;
+    border-bottom: 1px solid white;
+}
+
+#edit {
+    text-decoration: none;
+    color: #555;
+    border-bottom: 1px solid white;
 }
 
 #readbutton{
@@ -81,11 +89,28 @@ button:hover{
         grid-row: 2;
     }
 
-    #delete{
+    .adminbutton{
         margin-left: 50px;
     }
 
 }
+@media (max-width: 600px){
+    #readbutton{
+        float: none;
+        text-align: center;
+    }
+
+    .adminbutton{
+        float: none;
+        text-align: center;
+    }
+
+    button{
+        float: none;
+        text-align: center;
+    }
+}
+
 
 @media (max-width: 500px){
     .image{
