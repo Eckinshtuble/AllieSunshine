@@ -7,6 +7,7 @@ use App\Http\Requests;
 use DB;
 use App\BlogPost;
 use App\Http\Requests\BlogPostRequest;
+use \Input as Input;
 
 class BlogPostController extends Controller
 {
@@ -53,5 +54,13 @@ class BlogPostController extends Controller
     public function destroy(BlogPost $blog_post){
         $blog_post->delete();
         return redirect('whatsnew');
+    }
+
+    public function image(){
+        if(Input::hasfile('file')){
+            $file = Input::file('file');
+            $file->move('images', $file->getClientOriginalName());
+            echo '<img src="images/' . $file->getClientOriginalName() . '" />';
+        }
     }
 }

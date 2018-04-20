@@ -1,8 +1,7 @@
 @extends('master')
-<head>
-    <link href="{{ asset('css/whatsnew.css') }}" rel="stylesheet">
-</head>
+
 @section('main-body')
+    <link href="{{ asset('css/whatsnew.css') }}" rel="stylesheet">
     <h2>What's New</h2>
     @if(Auth::check() && Auth::user()->admin())
         <p id="createid"><a href="{{ url('whatsnew/create') }}" >[Create New]</a></p>
@@ -21,19 +20,18 @@
                         <p> {{ substr($blog_post->blog_post_body, 0, 350)}} ...</p>
                         <br />
                     <br />
-                   <button id="readbutton"> <a id="showlink" href="{{ url('whatsnew/'.$blog_post->id) }}">Read More</a></button>
+                    <a id="showlink" href="{{ url('whatsnew/'.$blog_post->id) }}"><button id="readbutton"> Read More</button></a>
                     <br/>
 
                     <br/>
-
-
 
                 </div>
                 </div>
                 <br /><br />
             @if(Auth::check() && Auth::user()->admin())
-                <button class="adminbutton"><a href="{{ action('BlogPostController@edit', $blog_post->id) }}">Edit</a></button>
+                <button class="adminbutton"> <a id="edit" href="{{ action('BlogPostController@edit', $blog_post->id) }}"><button class="adminbutton">Edit</button></a>
             @endif
+
         <br />
         <br />
             <form method="post" action="{{ action('BlogPostController@destroy', $blog_post->id) }}">
