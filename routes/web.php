@@ -63,3 +63,8 @@ Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('donate','DonatesController@index');
+Route::post('paypal/payment', 'DonatesController@payWithpaypal');
+Route::get('paywithpaypal', array('as' => 'donate.paywithpaypal','uses' => 'DonatesController@payWithPaypal',));
+Route::get('paypal', array('as' => 'status','uses' => 'DonatesController@getPaymentStatus',));
