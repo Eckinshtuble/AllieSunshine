@@ -13,8 +13,9 @@
         <br/>
         <p id="hr"><hr class="hrtag"/></p>
         <br/>
-        <p id="showbody">{{$blog_post->blog_post_body}}</p>
+        <div id="showbody">
+            {!!  nl2br(e($blog_post->blog_post_body)) !!}
+        </div>
         <br />
-
-    </div>
+</div>
 @endsection
