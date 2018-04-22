@@ -13,8 +13,6 @@ class CreateEventOrganizerTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
         Schema::create('event_organizer', function (Blueprint $table) {
             $table->increments('id');
 
@@ -26,8 +24,6 @@ class CreateEventOrganizerTable extends Migration
 
             $table->timestamps();
         });
-
-        Schema::enableForeignKeyConstraints();
     }
 
     /**

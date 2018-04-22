@@ -1,0 +1,38 @@
+.wrapper {
+    width: 750px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+label {
+    padding: 20px 0;
+    color: navy;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 20px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type=submit] {
+    width: 100%;
+    padding: 10px 0;
+    margin: 20px 0 0 0;
+    border-radius: 200px;
+    background-color: #ffe607;
+    border: 1px solid #ffe607;
+    cursor: pointer;
+}
+
+.select-form {
+    margin: 20px 0;
+    height: 50px;
+}
+

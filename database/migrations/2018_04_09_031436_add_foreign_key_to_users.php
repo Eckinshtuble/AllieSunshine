@@ -13,8 +13,6 @@ class AddForeignKeyToUsers extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
         Schema::table('users', function (Blueprint $table) {
             $table->foreign('salutation_id')->references('id')->on('salutations')->onDelete('set null');
             $table->foreign('province_id')->references('id')->on('provinces')->onDelete('set null');
@@ -22,8 +20,6 @@ class AddForeignKeyToUsers extends Migration
             $table->foreign('phone_preference_id')->references('id')->on('phone_preferences')->onDelete('set null');
             $table->foreign('contact_preference_id')->references('id')->on('contact_preferences')->onDelete('set null');
         });
-
-        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -34,7 +30,7 @@ class AddForeignKeyToUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+
         });
     }
 }

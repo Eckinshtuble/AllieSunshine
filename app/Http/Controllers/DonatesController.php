@@ -16,9 +16,10 @@ use PayPal\Api\ExecutePayment;
 use PayPal\Api\PaymentExecution;
 use PayPal\Api\Transaction;
 use URL;
-use Session;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
+
 class DonatesController extends Controller
 {
     private $_api_context;
@@ -34,7 +35,7 @@ class DonatesController extends Controller
                 $paypal_conf['client_id'],
                 $paypal_conf['secret'])
         );
-        $this->_api_context->setConfig($paypal_conf['settings']);
+        $this->_api_context->setConfig(['settings']);
     }
     public function payWithpaypal(Request $request) {
         $payer = new Payer();

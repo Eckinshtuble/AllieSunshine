@@ -3,17 +3,10 @@
     <link href="{{ asset('css/whatsnew.css') }}" rel="stylesheet">
 </head>
 @section('main-body')
-    <h2>My Profile</h2>
     <section class="section-features" id="features">
+        <h2>All Volunteers</h2>
         <div id="blogPostId">
-
-            <br />
-            <h2>All Users</h2>
-            <br />
-            <br/>
-            <br/>
             @foreach ($users_info as $user_info)
-                <p id="hr"><hr class="hrtag"/></p>
                 <h3>User {{ $user_info->id }}</h3>
                 <br/>
                 <p id="showbody">{{$user_info->first_name}}</p>
@@ -22,7 +15,6 @@
                 <br />
                 <p id="showbody">{{$user_info->email}}</p>
                 <br />
-                <p id="showbody">{{$user_info->salutation_id}}</p>
                 <br />
                 <p id="showbody">{{$user_info->title}}</p>
                 <br />

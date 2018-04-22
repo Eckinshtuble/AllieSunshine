@@ -1,10 +1,8 @@
 <?php
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
-class CreatePhonePreferencesTable extends Migration
+class AddForeignKeyToBlogPostImages extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +11,11 @@ class CreatePhonePreferencesTable extends Migration
      */
     public function up()
     {
-        Schema::create('phone_preferences', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('phone_preference');
-            $table->timestamps();
+        Schema::table('blog_post_images', function (Blueprint $table) {
+            $table->foreign('blog_post_id')->references('id')->on('blog_posts')->onDelete('cascade');
         });
-    }
 
+    }
     /**
      * Reverse the migrations.
      *
@@ -27,6 +23,8 @@ class CreatePhonePreferencesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('phone_preferences');
+        Schema::table('blog_post_images', function (Blueprint $table) {
+            //
+        });
     }
 }

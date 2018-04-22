@@ -13,8 +13,6 @@ class CreateSocialProvidersTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
         Schema::create('social_providers', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->references('id')->on('users');
@@ -24,8 +22,6 @@ class CreateSocialProvidersTable extends Migration
             $table->boolean('is_admin')->default(0);
             $table->timestamps();
         });
-
-        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -35,6 +31,7 @@ class CreateSocialProvidersTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('social_providers');
     }
 }
