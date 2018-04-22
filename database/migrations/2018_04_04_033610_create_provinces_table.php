@@ -13,6 +13,8 @@ class CreateProvincesTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('provinces', function (Blueprint $table) {
             $table->increments('id');
             $table->string('province_name');
@@ -20,6 +22,8 @@ class CreateProvincesTable extends Migration
             $table->integer('country_id')->unsigned();
             $table->timestamps();
         });
+
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

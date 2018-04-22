@@ -13,11 +13,13 @@ class AddForeignKeyToThankYous extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::table('thank_yous', function (Blueprint $table) {
             $table->foreign('thank_you_card_id')->references('id')->on('thank_you_cards')->onDelete('set null');
         });
 
-        Schema::disableForeignKeyConstraints();
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

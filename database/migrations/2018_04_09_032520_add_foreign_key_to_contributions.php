@@ -13,6 +13,8 @@ class AddForeignKeyToContributions extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::table('contributions', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
             $table->foreign('payment_method_id')->references('id')->on('payment_methods')->onDelete('set null');
@@ -20,7 +22,7 @@ class AddForeignKeyToContributions extends Migration
             $table->foreign('thank_you_id')->references('id')->on('thank_yous')->onDelete('set null');
         });
 
-        Schema::disableForeignKeyConstraints();
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

@@ -13,11 +13,15 @@ class CreateSkillsTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('skills', function (Blueprint $table) {
             $table->increments('id');
             $table->string('skill');
             $table->timestamps();
         });
+
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

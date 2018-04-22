@@ -13,6 +13,8 @@ class CreateOrganizersTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('organizers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('organizer_first_name');
@@ -20,6 +22,8 @@ class CreateOrganizersTable extends Migration
             $table->string('organizer_email')->nullable();
             $table->timestamps();
         });
+
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

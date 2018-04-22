@@ -13,11 +13,13 @@ class AddForeignKeyToProvinces extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::table('provinces', function (Blueprint $table) {
             $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
         });
 
-        Schema::disableForeignKeyConstraints();
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

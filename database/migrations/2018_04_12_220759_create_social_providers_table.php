@@ -13,6 +13,8 @@ class CreateSocialProvidersTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('social_providers', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->references('id')->on('users');
@@ -23,7 +25,7 @@ class CreateSocialProvidersTable extends Migration
             $table->timestamps();
         });
 
-        Schema::disableForeignKeyConstraints();
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

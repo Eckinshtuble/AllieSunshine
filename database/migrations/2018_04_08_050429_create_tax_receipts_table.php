@@ -13,11 +13,15 @@ class CreateTaxReceiptsTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('tax_receipts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('tax_receipt');
             $table->timestamps();
         });
+
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

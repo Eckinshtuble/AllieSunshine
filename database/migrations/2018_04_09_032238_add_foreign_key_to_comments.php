@@ -13,12 +13,14 @@ class AddForeignKeyToComments extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::table('comments', function (Blueprint $table) {
             $table->foreign('blog_post_id')->references('id')->on('blog_posts')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
 
-        Schema::disableForeignKeyConstraints();
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
