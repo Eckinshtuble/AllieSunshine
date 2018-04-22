@@ -29,6 +29,8 @@ class CreateEventUserTable extends Migration
 
             $table->timestamps();
         });
+
+        Schema::disableForeignKeyConstraints();
     }
 
     /**

@@ -24,6 +24,8 @@ class CreateSkillUserTable extends Migration
 
             $table->timestamps();
         });
+
+        Schema::disableForeignKeyConstraints();
     }
 
     /**

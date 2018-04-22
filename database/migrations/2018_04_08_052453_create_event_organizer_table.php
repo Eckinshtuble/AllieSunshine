@@ -24,6 +24,8 @@ class CreateEventOrganizerTable extends Migration
 
             $table->timestamps();
         });
+
+        Schema::disableForeignKeyConstraints();
     }
 
     /**

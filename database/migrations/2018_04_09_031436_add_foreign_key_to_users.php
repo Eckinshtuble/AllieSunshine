@@ -20,6 +20,8 @@ class AddForeignKeyToUsers extends Migration
             $table->foreign('phone_preference_id')->references('id')->on('phone_preferences')->onDelete('set null');
             $table->foreign('contact_preference_id')->references('id')->on('contact_preferences')->onDelete('set null');
         });
+
+        Schema::disableForeignKeyConstraints();
     }
 
     /**
