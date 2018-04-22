@@ -1,0 +1,118 @@
+  /*********************/
+ /* Navigation Styles */
+/*********************/
+
+nav{
+	background-color: #fff;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.2em;
+	height: 20vh;
+	z-index: 999;
+}
+
+nav .navbar-brand img{
+	width: 200px;
+}
+
+nav .navbar-auth{
+	padding-right: 20px;
+}
+
+nav .nav-item{
+	background-color: #fff;
+}
+
+nav button{
+	margin-right: 30px;
+}
+
+
+  /***************/
+ /* Body Styles */
+/***************/
+
+h2 {
+	font-size: 2.2em;
+	text-align: center;
+	margin-bottom: 30px;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+}
+
+h3 {
+	font-size: 1.8em;
+	margin-bottom: 30px;
+}
+
+h2:after {
+	display: block;
+	height: 2px;
+	background-color: #ffe607;
+	content: " ";
+	width: 100px;
+	margin: 28px auto 0;
+}
+
+h2, h3 {
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+section {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	padding: 60px 275px;
+}
+
+.section-gray {
+	background-color: #f4f4f4;
+}
+
+section p{
+	font-size: 1.2em;
+	line-height: 145%;
+	margin: 0 auto 20px;
+}
+
+
+  /*****************/
+ /* Button Styles */
+/*****************/
+
+.btn:link, .btn:visited {
+  background-color: #ffe607;
+  font-size: 1em;
+  color: navy;
+  display: inline-block;
+  font-weight: 300;
+  border-radius: 200px;
+  margin-top: 10px;
+  margin-right: 20px;
+  padding: 10px 40px;
+  text-decoration: none;
+}
+
+.btn:hover, .btn:active, input[type=submit]:hover, input[type=submit]:active {
+  background-color: #ffd507;
+  color: navy;
+  border-bottom: none;
+}
+
+
+  /*****************/
+ /* Footer Styles */
+/*****************/
+
+.footer {
+	text-align: center;
+	font-size: 0.8em;
+}
+
+.footer p{
+	margin: 0;
+}
+
+.footer span {
+	display: block;
+	margin-bottom: 20px;
+}

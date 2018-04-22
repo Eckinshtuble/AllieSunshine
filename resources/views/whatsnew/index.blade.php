@@ -2,13 +2,16 @@
 
 @section('main-body')
     <link href="{{ asset('css/whatsnew.css') }}" rel="stylesheet">
+
     <h2>What's New</h2>
+
     @if(Auth::check() && Auth::user()->admin())
-        <p id="createid"><a href="{{ url('whatsnew/create') }}" >[Create New]</a></p>
+        <p id="createid"><a href="{{ url('whatsnew/create') }}">Create New</a></p>
     @endif
+
     <section class="section-features" id="features">
         @foreach ($blog_posts as $blog_post)
-            <div class="wrapper">
+            <div class="section">
                 <div class="one">
                     <h3>{{ $blog_post->blog_post_title }}</h3>
                     <br/>
