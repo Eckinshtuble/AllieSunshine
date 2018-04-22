@@ -43,4 +43,6 @@ class CommentController extends Controller
         return redirect('whatsnew.show');
     }
 
+
+
 }
