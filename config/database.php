@@ -56,7 +56,7 @@ return [
             'driver' => 'mysql',
             'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'parallaxmedia'),
+            'database' => env('DB_DATABASE', 'parallaxdb'),
             'username' => env('DB_USERNAME', 'parallax'),
             'password' => env('DB_PASSWORD', '7hr4c7hr4ckzv2lkzv2l'),
             'charset' => 'utf8',
