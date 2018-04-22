@@ -16,6 +16,7 @@ class AddForeignKeyToProvinces extends Migration
         Schema::table('provinces', function (Blueprint $table) {
             $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
         });
+
     }
 
     /**

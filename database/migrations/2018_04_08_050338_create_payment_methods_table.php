@@ -13,6 +13,8 @@ class CreatePaymentMethodsTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('payment_methods', function (Blueprint $table) {
             $table->increments('id');
             $table->string('payment_method');

@@ -13,11 +13,14 @@ class CreatePhonePreferencesTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('phone_preferences', function (Blueprint $table) {
             $table->increments('id');
             $table->string('phone_preference');
             $table->timestamps();
         });
+
     }
 
     /**
