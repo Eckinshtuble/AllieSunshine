@@ -1,0 +1,98 @@
+.emailForm{
+    float: inherit;
+    text-align: center;
+    margin-left: 650px;
+}
+
+.secretlabel{
+    display: none;
+}
+
+.regularlabel{
+    display: inherit;
+}
+
+h3{
+    text-align: center;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+}
+
+
+@media (max-width: 1550px) {
+    .emailform{
+        margin-left : 600px;
+    }
+}
+
+@media (max-width: 1450px) {
+    .emailform{
+        margin-left : 500px;
+    }
+}
+
+@media (max-width: 1350px) {
+    .emailform{
+        margin-left : 480px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .emailform{
+        margin-left : 440px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .emailform{
+        margin-left: 370px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .emailform{
+        margin-left: 300px;
+    }
+}
+
+@media (max-width: 900px) {
+    .emailform{
+        margin-left: 250px;
+    }
+}
+
+@media (max-width: 800px) {
+    .emailform{
+        margin-left: 150px;
+    }
+}
+
+@media (max-width: 600px) {
+    .emailform{
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .emailform{
+        margin-left: 100px;
+    }
+
+    .secretlabel{
+        display: inherit;
+    }
+
+    .regularlabel{
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .emailform{
+        margin-left: 30px;
+    }
+
+}

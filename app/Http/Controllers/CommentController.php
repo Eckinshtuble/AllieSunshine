@@ -10,6 +10,17 @@ use App\Comment;
 
 class CommentController extends Controller
 {
+    public function index(){
+        $comments =  Comment::all();
+        return view('whatsnew.show', compact("comments"));
+    }
+
+    public function show($comment){
+        $comment = comment::find($comment);
+
+        return view('whatsnew.show', compact("comment"));
+    }
+
     public function __construct(){
         $this->middleware('auth', ['only' =>['destroy', 'create']]);
     }
@@ -20,10 +31,8 @@ class CommentController extends Controller
     }
 
     public function create(){
-        //I DONT KNOW HOW TO DO THIS YET
-
-        //$blog_posts = Blog_Post::all()->pluck('title', 'id');
-        //return view('posts.create', compact("blog_posts"));
+        $blog_posts = BlogPost::all()->pluck('blog_post_title', 'blog_post_id');
+        return view('whatsnew.show', compact("blog_posts"));
     }
 
     public function store(Request $request) {
@@ -33,4 +42,5 @@ class CommentController extends Controller
         $comment->blog_post()->associate($blog_post)->save();
         return redirect('whatsnew.show');
     }
+
 }

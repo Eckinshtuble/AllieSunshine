@@ -29,7 +29,7 @@
                 </div>
                 <br /><br />
             @if(Auth::check() && Auth::user()->admin())
-                <button class="adminbutton"> <a id="edit" href="{{ action('BlogPostController@edit', $blog_post->id) }}"><button class="adminbutton">Edit</button></a>
+                 <a id="edit" href="{{ action('BlogPostController@edit', $blog_post->id) }}"><button class="adminbutton">Edit</button></a>
             @endif
 
         <br />

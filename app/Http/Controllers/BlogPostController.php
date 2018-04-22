@@ -56,11 +56,4 @@ class BlogPostController extends Controller
         return redirect('whatsnew');
     }
 
-    public function image(){
-        if(Input::hasfile('file')){
-            $file = Input::file('file');
-            $file->move('images', $file->getClientOriginalName());
-            echo '<img src="images/' . $file->getClientOriginalName() . '" />';
-        }
-    }
 }

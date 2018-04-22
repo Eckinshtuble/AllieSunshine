@@ -12,6 +12,6 @@ class BlogPost extends Model
     ];
 
     public function comments(){
-        return $this->hasMany(Comment::class, 'id');
+        return $this->hasMany(Comment::class, 'blog_post_id');
     }
 }

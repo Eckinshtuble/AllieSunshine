@@ -94,6 +94,14 @@ button:hover{
     }
 
 }
+
+@media (max-width: 950px){
+    #readbutton{
+        float: none;
+        text-align: center;
+    }
+}
+
 @media (max-width: 600px){
     #readbutton{
         float: none;
