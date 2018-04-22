@@ -32,7 +32,11 @@
                 </div>
                 <br /><br />
             @if(Auth::check() && Auth::user()->admin())
-                <button class="adminbutton"> <a id="edit" href="{{ action('BlogPostController@edit', $blog_post->id) }}"><button class="adminbutton">Edit</button></a>
+                <button class="adminbutton">
+                    <a id="edit" href="{{ action('BlogPostController@edit', $blog_post->id) }}">
+                        Edit
+                    </a>
+                </button>
             @endif
 
         <br />
@@ -53,5 +57,6 @@
 
         @endforeach
 
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=noor.alwakel2025%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FToronto" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </section>
 @endsection
