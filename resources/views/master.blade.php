@@ -56,7 +56,7 @@
                 <li><a href="{{ url('/login') }}">Login</a></li>
                 <li><a href="{{ url('/register') }}">Register</a></li>
             @else
-                <li><a href="{{ url('userprofile') }}">{{"Welcome, " . Auth::user()->first_name }}</a></li>
+                <li><a href="{{ url('/userprofile/' . Auth::user()->id) }}">{{"Welcome, " . Auth::user()->first_name }}</a></li>
                 <li>
                     <a href="{{ url('/logout') }}" onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">

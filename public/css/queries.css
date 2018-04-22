@@ -186,6 +186,32 @@
         padding-bottom: 25px;
     }
 
+    .legacy-wrap {
+        width: 100%;
+        text-align: center;
+    }
+
+    .legacy-wrap p {
+        text-align: left;
+    }
+
+    .legacy-wrap-inner p, .legacy-wrap-inner-bottom  p, .legacy-wrap-inner img, .legacy-wrap-inner-bottom img {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .legacy-wrap-inner-bottom img {
+        height: 40%;
+    }
+
+    .legacy-wrap-inner p {
+        float: none;
+    }
+
+    .legacy-wrap-inner-bottom img, .legacy-wrap-inner-bottom p {
+        float: none;
+    }
+
 }
 
 
