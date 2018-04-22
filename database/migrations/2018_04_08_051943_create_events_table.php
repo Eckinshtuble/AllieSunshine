@@ -13,6 +13,8 @@ class CreateEventsTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
             $table->string('event_name');

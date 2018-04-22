@@ -1,10 +1,8 @@
 <?php
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
-class CreateTaxReceiptsTable extends Migration
+class AddForeignKeyToBlogPosts extends Migration
 {
     /**
      * Run the migrations.
@@ -15,14 +13,11 @@ class CreateTaxReceiptsTable extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('tax_receipts', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('tax_receipt');
-            $table->timestamps();
+        Schema::table('blog_posts', function (Blueprint $table) {
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
 
     }
-
     /**
      * Reverse the migrations.
      *
@@ -30,6 +25,8 @@ class CreateTaxReceiptsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tax_receipts');
+        Schema::table('blog_posts', function (Blueprint $table) {
+            //
+        });
     }
 }

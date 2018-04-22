@@ -13,6 +13,8 @@ class CreateContributionsTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('contributions', function (Blueprint $table) {
             $table->increments('id');
             $table->boolean('anonymous')->default(0);
@@ -24,6 +26,7 @@ class CreateContributionsTable extends Migration
             $table->integer('thank_you_id')->unsigned()->nullable();
             $table->timestamps();
         });
+
     }
 
     /**

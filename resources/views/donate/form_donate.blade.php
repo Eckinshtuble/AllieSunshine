@@ -3,7 +3,7 @@
 @section('main-body')
 
     <form class="form-horizontal" method="POST" id="payment-form" role="form" action="{!! action('DonatesController@payWithpaypal') !!}" >
-        {{ csrf_field() }}
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
         <label for="amount" class="col-md-4 control-label">Amount</label>
 

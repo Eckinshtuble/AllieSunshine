@@ -11,11 +11,11 @@ Route::get('index', function () {
 });
 
 Route::get('legacy', function (){
-    return view('about-us/about');
+    return view('legacy/legacy');
 });
 
 Route::get('getinvolved', function (){
-    return view('get-involved/getinvolved');
+    return view('getinvolved/getinvolved');
 });
 
 Route::get('blog', function (){
@@ -64,7 +64,11 @@ Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCall
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('donate','DonatesController@index');
-Route::post('paypal/payment', 'DonatesController@payWithpaypal');
-Route::get('paywithpaypal', array('as' => 'donate.paywithpaypal','uses' => 'DonatesController@payWithPaypal',));
-Route::get('paypal', array('as' => 'status','uses' => 'DonatesController@getPaymentStatus',));
+
+Route::group(['middleware' => ['web']], function () {
+    Route::get('donate','DonatesController@index');
+    Route::post('paypal/payment', 'DonatesController@payWithpaypal');
+    Route::get('paywithpaypal', array('as' => 'donate.paywithpaypal','uses' => 'DonatesController@payWithPaypal',));
+    Route::get('paypal', array('as' => 'status','uses' => 'DonatesController@getPaymentStatus',));
+});
+
