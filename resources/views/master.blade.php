@@ -88,8 +88,8 @@
 <section class="footer">
     <p>
         <span class="footer-text">Copyright 2018 The Allie Sunshine Project | Developed by Parallax Web Design</span>
-        <a href="https://instagram.com"><img src={{ asset('/images/instagram.png')}} width="50" height="50" class="logo-inst" alt="Logo"></a>
-        <a href="https://facebook.com"><img src={{ asset('/images/facebook.png')}} width="50" height="50" alt="Logo"></a>
+        <a href="https://instagram.com"><img src={{ asset('/images/instagram.png')}} width="40" height="40" class="logo-inst" alt="Logo"></a>
+        <a href="https://facebook.com"><img src={{ asset('/images/facebook.png')}} width="40" height="40" alt="Logo"></a>
     </p>
 </section>
 
