@@ -1,12 +1,14 @@
 @extends('master')
 
+<link href="{{ asset('/css/legacy.css') }}" rel="stylesheet">
+
 @section('main-body')
     <h2>Legacy</h2>
     <div class="legacy-wrap">
         <div class="legacy-wrap-inner">
             <h3>Legacy of the Allie Sunshine Project</h3>
 
-            <img src="{{ asset('/images/Carousel1_opt.jpg') }}" alt="legacy" width="450" height="280">
+            <img src="{{ asset('/images/Carousel1_opt.jpg') }}" alt="legacy" width="530" height="328">
             <p class="long-copy">
                 This project was born to ignite learning and wellness in the name of educator
                 and wellness pioneer Allison Hayes. Wellness is an actively sought state of

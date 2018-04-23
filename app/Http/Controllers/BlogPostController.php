@@ -18,6 +18,7 @@ class BlogPostController extends Controller
 
     public function show($blog_post){
         $blog_post = BlogPost::find($blog_post);
+
         return view('whatsnew.show', compact("blog_post"));
     }
 
@@ -56,11 +57,11 @@ class BlogPostController extends Controller
         return redirect('whatsnew');
     }
 
-    public function image(){
+   /* public function image(){
         if(Input::hasfile('file')){
             $file = Input::file('file');
             $file->move('images', $file->getClientOriginalName());
             echo '<img src="images/' . $file->getClientOriginalName() . '" />';
         }
-    }
+    }*/
 }

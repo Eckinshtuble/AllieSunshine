@@ -13,6 +13,11 @@
         @foreach ($blog_posts as $blog_post)
             <div class="section">
                 <div class="one">
+                    <h3>{{ $blog_post->id }}</h3>
+                    <br/>
+
+                </div>
+                <div class="one">
                     <h3>{{ $blog_post->blog_post_title }}</h3>
                     <br/>
                    
@@ -23,7 +28,7 @@
                         <p> {{ substr($blog_post->blog_post_body, 0, 350)}} ...</p>
                         <br />
                     <br />
-                    <a id="showlink" href="{{ url('whatsnew/'.$blog_post->id) }}"><button id="readbutton"> Read More</button></a>
+                    <a class="btn btn-full read-btn" href="{{ url('whatsnew/'. $blog_post->id) }}">Read More</a>
                     <br/>
 
                     <br/>
@@ -32,7 +37,7 @@
                 </div>
                 <br /><br />
             @if(Auth::check() && Auth::user()->admin())
-                <button class="adminbutton"> <a id="edit" href="{{ action('BlogPostController@edit', $blog_post->id) }}"><button class="adminbutton">Edit</button></a>
+                <a class="btn btn-full edit-btn" href="{{ action('BlogPostController@edit', $blog_post->id) }}">Edit</a>
             @endif
 
         <br />

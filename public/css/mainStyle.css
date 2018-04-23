@@ -2,12 +2,14 @@
  /* Navigation Styles */
 /*********************/
 
-nav{
+nav {
 	background-color: #fff;
 	font-family: 'Lato', sans-serif;
-	font-size: 1.2em;
+	text-transform: uppercase;
+	font-size: 0.95em;
 	height: 20vh;
 	z-index: 999;
+	color: navy;
 }
 
 nav .navbar-brand img{
@@ -18,7 +20,7 @@ nav .navbar-auth{
 	padding-right: 20px;
 }
 
-nav .nav-item{
+nav .nav-item {
 	background-color: #fff;
 }
 
@@ -62,6 +64,7 @@ section {
 	margin: 0;
 	font-family: 'Lato', sans-serif;
 	padding: 60px 275px;
+	font-weight: 300;
 }
 
 .section-gray {
@@ -106,13 +109,32 @@ section p{
 .footer {
 	text-align: center;
 	font-size: 0.8em;
+	background-color: #f4f4f4;
 }
 
-.footer p{
+.footer p {
 	margin: 0;
 }
 
 .footer span {
-	display: block;
+	display: inline-block;
 	margin-bottom: 20px;
+	margin-right: 10px;
 }
+
+
+  .googleCalendar{
+	  position: relative;
+	  height: 0;
+	  width: 50%;
+	  padding-bottom: 50%;
+	  margin: 0 auto;
+  }
+
+  .googleCalendar iframe{
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+  }
