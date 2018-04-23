@@ -1,6 +1,6 @@
 @extends('master')
 
-<link href="{{ asset('/css/blogshow.css') }}" rel="stylesheet">
+<link href="{{ asset('/css/userprofile.css') }}" rel="stylesheet">
 
 @section('main-body')
     <div id="blogPostId">

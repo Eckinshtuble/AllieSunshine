@@ -38,7 +38,7 @@ return [
     'facebook' => [
         'client_id' => '205766463363276',
         'client_secret' => 'da2f8dffda96ecab47063915839fd13b',
-        'redirect' => 'https://mcipriano.scweb.ca/AllieSunshine/login/facebook/callback',
+        'redirect' => 'https://parallax.scweb.ca/AllieSunshine/login/facebook/callback',
     ],
 
     'google' => [

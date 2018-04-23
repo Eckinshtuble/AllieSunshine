@@ -21,6 +21,22 @@
     border: 1px solid rgba(0,0,0,.5);
 }
 
+.amount {
+    display: block;
+    padding: 10px 30px;
+    font-weight: 200;
+    font-size: 16px;
+    color: navy;
+    -webkit-transition: border 0.3s, color 0.3s;
+    transition: border 0.3s, color 0.3s;
+    text-decoration: none;
+    width: 400px;
+    border-radius: 200px;
+    margin: 0 auto 5px auto;
+    height: 40px;
+    border: 1px solid rgba(0,0,0,.5);
+}
+
 .btn-login {
     background-color: #ffe607;
     font-size: 1em;
@@ -35,6 +51,22 @@
     cursor: pointer;
     border: 1px solid #ffe607;
     width: 155px;
+}
+
+.btn-paypal {
+    background-color: #ffe607;
+    font-size: 1em;
+    color: navy;
+    display: inline-block;
+    font-weight: 300;
+    border-radius: 200px;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 10px 40px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #ffe607;
+    width: 200px;
 }
 
 .btn-login:hover {

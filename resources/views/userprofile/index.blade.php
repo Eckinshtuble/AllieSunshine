@@ -1,7 +1,7 @@
 @extends('master')
-<head>
-    <link href="{{ asset('css/whatsnew.css') }}" rel="stylesheet">
-</head>
+
+<link href="{{ asset('css/whatsnew.css') }}" rel="stylesheet">
+
 @section('main-body')
     <section class="section-features" id="features">
         <h2>All Volunteers</h2>
