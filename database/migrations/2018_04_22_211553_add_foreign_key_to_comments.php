@@ -1,7 +1,9 @@
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+
 class AddForeignKeyToBlogPosts extends Migration
 {
     /**
@@ -11,13 +13,11 @@ class AddForeignKeyToBlogPosts extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
-        Schema::table('blog_posts', function (Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        Schema::table('comments', function (Blueprint $table) {
+            $table->foreign('user_id')->references('id')->on('blog_posts')->onDelete('cascade');
         });
-
     }
+
     /**
      * Reverse the migrations.
      *
@@ -25,8 +25,6 @@ class AddForeignKeyToBlogPosts extends Migration
      */
     public function down()
     {
-        Schema::table('blog_posts', function (Blueprint $table) {
-            //
-        });
+        //
     }
 }

@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
+use Exception;
+use App\Http\Requests\CommentRequest;
 use DB;
 use App\BlogPost;
 use App\Comment;
@@ -14,23 +15,52 @@ class CommentController extends Controller
         $this->middleware('auth', ['only' =>['destroy', 'create']]);
     }
 
-    public function destroy(Comment $comment){
-        $comment->delete();
-        return redirect('whatsnew.show');
+    public function index(){
+        \Auth::User();
+        $comments = Comment::all()->where('user_id', \Auth::User()->id)->sortBy('name');
+
+        return view('whatsnew.index', compact("comments"));
+    }
+
+    public function show($comment){
+        $comment = Comment::find($comment);
+
+        return view('whatsnew.show', compact("comment"));
     }
 
     public function create(){
-        //I DONT KNOW HOW TO DO THIS YET
+        $blog_posts = BlogPost::all();
 
-        //$blog_posts = Blog_Post::all()->pluck('title', 'id');
-        //return view('posts.create', compact("blog_posts"));
+        return view('whatsnew.create', compact("blog_posts"));
     }
 
-    public function store(Request $request) {
-        $blog_post = BlogPost::find($request->blog_post_id);
-        $comment = new Comment($request->all());
-        $comment->id = 1;
-        $comment->blog_post()->associate($blog_post)->save();
-        return redirect('whatsnew.show');
+    public function store(CommentRequest $request){
+        \Auth::User();
+        $formData = $request->all();
+        $formData['user_id'] = \Auth::User()->id;
+
+        Comment::create($formData);
+
+        return redirect('whatsnew');
+    }
+
+    public function edit($comment){
+        $comment = Comment::findOrFail($comment);
+        $blog_posts = BlogPost::all();
+
+        return view('whatsnew.edit', compact("comment", "blog_posts"));
+    }
+
+    public function update(CommentRequest $request, $comment){
+        $formdata = $request->all();
+        $comment = Comment::findOrFail($comment);
+        $comment->update($formdata);
+
+        return redirect('whatsnew');
+    }
+
+    public function destroy(Comment $comment){
+        $comment->delete();
+        return redirect('whatsnew');
     }
 }
