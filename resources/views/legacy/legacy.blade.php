@@ -1,6 +1,7 @@
 @extends('master')
 
 @section('main-body')
+    <section>
     <h2>Legacy</h2>
     <div class="legacy-wrap">
         <div class="legacy-wrap-inner">
@@ -40,6 +41,6 @@
             </p>
         </div>
     </div>
-
+    </section>
 @endsection
 

@@ -81,53 +81,6 @@
         </div>
     </nav>
 
-    <!--
-    <nav>
-        <a class="logo-link" href="{{ url('index') }}"><img src={{ URL::asset('images/logo_opt.png')}} alt="Logo" class="logo-responsive"></a>
-
-        <div id="nav-icon" class="menu-icon">
-            <div class="menu-icon-top"></div>
-            <div class="menu-icon-middle"></div>
-            <div class="menu-icon-bottom"></div>
-        </div>
-
-        <ul class="navigation js--main-nav">
-            <div>
-                <a class="logo-link" href="{{ url('index') }}"><img src={{ URL::asset('images/logo_opt.png')}} alt="Logo" class="logo"></a>
-            </div>
-            <li><a href="{{ url('index') }}">Home</a></li>
-            <li class="dropdown"><a href="{{ url('whatsnew') }}">What's New</a></li>
-            <div class="dropdown-content">
-                <a href="{{ url('whatsnew') }}">Calendar</a>
-                <a href="{{ url('whatsnew') }}">Events</a>
-            </div>
-            </li>
-            <li><a href="{{ url('legacy') }}">Legacy</a></li>
-            <li><a href="{{ url('getinvolved') }}">Get Involved</a></li>
-            <li><a href="{{ url('gallery') }}">Gallery</a></li>
-            <li><a href="{{ url('contact') }}">Contact</a></li>
-        </ul>
-
-        <ul class="navigation-auth">
-            @if (Auth::guest())
-                <li><a href="{{ url('/login') }}">Login</a></li>
-                <li><a href="{{ url('/register') }}">Register</a></li>
-            @else
-                <li><a href="{{ url('/userprofile/' . Auth::user()->id) }}">{{"Welcome, " . Auth::user()->first_name }}</a></li>
-                <li>
-                    <a href="{{ url('/logout') }}" onclick="event.preventDefault();
-                           document.getElementById('logout-form').submit();">
-                        Logout
-                    </a>
-                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
-                </li>
-            @endif
-        </ul>
-    </nav>
-        -->
-
     @yield('content')
 </header>
 @yield('main-body')
