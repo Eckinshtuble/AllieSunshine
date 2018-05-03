@@ -11,8 +11,6 @@ class AddForeignKeyToBlogPostImages extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
         Schema::table('blog_post_images', function (Blueprint $table) {
             $table->foreign('blog_post_id')->references('id')->on('blog_posts')->onDelete('cascade');
         });

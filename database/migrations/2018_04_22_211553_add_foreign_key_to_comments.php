@@ -13,6 +13,10 @@ class AddForeignKeyToBlogPosts extends Migration
      */
     public function up()
     {
+        Schema::table('blog_posts', function (Blueprint $table) {
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        });
+
         Schema::table('comments', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('blog_posts')->onDelete('cascade');
         });

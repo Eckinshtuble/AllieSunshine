@@ -37,6 +37,11 @@
                 </div>
                 <br /><br />
             @if(Auth::check() && Auth::user()->admin())
+                <button class="adminbutton">
+                    <a id="edit" href="{{ action('BlogPostController@edit', $blog_post->id) }}">
+                        Edit
+                    </a>
+                </button>
                 <a class="btn btn-full edit-btn" href="{{ action('BlogPostController@edit', $blog_post->id) }}">Edit</a>
             @endif
 

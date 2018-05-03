@@ -13,8 +13,6 @@ class CreateOrganizersTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
         Schema::create('organizers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('organizer_first_name');

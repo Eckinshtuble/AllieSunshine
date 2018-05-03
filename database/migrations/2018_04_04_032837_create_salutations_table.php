@@ -13,14 +13,11 @@ class CreateSalutationsTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
         Schema::create('salutations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('salutation');
             $table->timestamps();
         });
-
     }
 
     /**

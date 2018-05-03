@@ -27,7 +27,9 @@ class BlogPostController extends Controller
     }
 
     public function store(BlogPostRequest $request){
+        \Auth::User();
         $formData = $request->all();
+        $formData['user_id'] = \Auth::User()->id;
 
         BlogPost::create($formData);
 

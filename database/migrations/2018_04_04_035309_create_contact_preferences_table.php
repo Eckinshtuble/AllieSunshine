@@ -13,14 +13,11 @@ class CreateContactPreferencesTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
         Schema::create('contact_preferences', function (Blueprint $table) {
             $table->increments('id');
             $table->string('contact_preference');
             $table->timestamps();
         });
-
     }
 
     /**

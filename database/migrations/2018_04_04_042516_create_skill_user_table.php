@@ -13,8 +13,6 @@ class CreateSkillUserTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
         Schema::create('skill_user', function (Blueprint $table) {
             $table->increments('id');
 
