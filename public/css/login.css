@@ -69,6 +69,11 @@
     width: 200px;
 }
 
+.btn-paypal-center {
+    width: 400px;
+    margin: 0 auto;
+}
+
 .btn-login:hover {
     background-color: red;
     color: navy;

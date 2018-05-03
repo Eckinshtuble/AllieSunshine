@@ -1,0 +1,17 @@
+.payment-success {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.payment-success p {
+    text-align: center;
+}
+
+.payment-cancelled {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.payment-cancelled p {
+    text-align: center;
+}

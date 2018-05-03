@@ -16,7 +16,7 @@
             </span>
 
             <div class="form-group">
-                <div class="col-md-6 col-md-offset-4">
+                <div class="btn-paypal-center">
                     <button type="submit" class="btn-paypal">
                         Pay with Paypal
                     </button>

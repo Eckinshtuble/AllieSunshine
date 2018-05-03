@@ -15,26 +15,9 @@
                 <br />
                 <p id="showbody">{{$user_info->email}}</p>
                 <br />
-                <br />
-                <p id="showbody">{{$user_info->title}}</p>
-                <br />
-                <p id="showbody">{{$user_info->address}}</p>
-                <br />
                 <p id="showbody">{{$user_info->city}}</p>
                 <br />
-                <p id="showbody">{{$user_info->province_id}}</p>
-                <br />
-                <p id="showbody">{{$user_info->country_id}}</p>
-                <br />
-                <p id="showbody">{{$user_info->postal_code}}</p>
-                <br />
                 <p id="showbody">{{$user_info->phone}}</p>
-                <br />
-                <p id="showbody">{{$user_info->phone_preference_id}}</p>
-                <br />
-                <p id="showbody">{{$user_info->contact_preference_id}}</p>
-                <br />
-                <p id="showbody">{{$user_info->casl_agreement}}</p>
                 <br />
             @endforeach
         </div>
