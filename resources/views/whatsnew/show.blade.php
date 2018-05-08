@@ -16,6 +16,11 @@
         <div id="showbody">
             {!!  nl2br(e($blog_post->blog_post_body)) !!}
         </div>
+
+        @foreach($blog_post->comments as $comment)
+            {{ $comment->user_id }}
+            {{ $comment->comment_body }}
+        @endforeach
         <br />
         <br />
         <div id="comments">

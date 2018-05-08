@@ -13,8 +13,6 @@ class CreateCommentsTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
             $table->string('comment_body');
@@ -22,7 +20,6 @@ class CreateCommentsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->timestamps();
         });
-
     }
 
     /**

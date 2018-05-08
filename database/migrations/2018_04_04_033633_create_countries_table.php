@@ -13,14 +13,11 @@ class CreateCountriesTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
         Schema::create('countries', function (Blueprint $table) {
             $table->increments('id');
             $table->string('country_name');
             $table->timestamps();
         });
-
     }
 
     /**

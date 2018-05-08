@@ -19,7 +19,6 @@ class AddForeignKeyToContributions extends Migration
             $table->foreign('tax_receipt_id')->references('id')->on('tax_receipts')->onDelete('set null');
             $table->foreign('thank_you_id')->references('id')->on('thank_yous')->onDelete('set null');
         });
-
     }
 
     /**

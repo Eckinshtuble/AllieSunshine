@@ -81,3 +81,4 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('paypal', array('as' => 'status','uses' => 'DonatesController@getPaymentStatus',));
 });
 
+Route::get('comments', 'CommentController@index');

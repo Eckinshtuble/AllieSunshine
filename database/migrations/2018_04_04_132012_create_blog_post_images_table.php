@@ -13,8 +13,6 @@ class CreateBlogPostImagesTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
         Schema::create('blog_post_images', function (Blueprint $table) {
             $table->increments('id');
             $table->binary('image_file');
@@ -23,8 +21,6 @@ class CreateBlogPostImagesTable extends Migration
             $table->integer('blog_post_id')->unsigned();
             $table->timestamps();
         });
-
-        Schema::enableForeignKeyConstraints();
     }
 
     /**

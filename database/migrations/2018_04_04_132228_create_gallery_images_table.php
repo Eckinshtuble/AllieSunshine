@@ -13,15 +13,12 @@ class CreateGalleryImagesTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
         Schema::create('gallery_images', function (Blueprint $table) {
             $table->increments('id');
             $table->binary('gallery_image');
             $table->string('description');
             $table->timestamps();
         });
-
     }
 
     /**

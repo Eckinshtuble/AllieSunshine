@@ -17,7 +17,6 @@ class AddForeignKeyToComments extends Migration
             $table->foreign('blog_post_id')->references('id')->on('blog_posts')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
-
     }
 
     /**
