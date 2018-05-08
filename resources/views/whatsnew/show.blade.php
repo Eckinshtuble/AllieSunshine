@@ -25,7 +25,7 @@
             <br/>
         </div>
         <br />
-        <form method="POST" action="{{action ('CommentController@store')}}">
+        <form method="POST" action="">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <label for="comment_body">Body:</label>
             <input name="comment_body" type="text"><br>

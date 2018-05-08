@@ -13,6 +13,8 @@ class CreateThankYouCardsTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('thank_you_cards', function (Blueprint $table) {
             $table->increments('id');
             $table->binary('thank_you_card');

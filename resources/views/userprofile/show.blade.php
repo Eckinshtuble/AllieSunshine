@@ -19,7 +19,6 @@
         <br />
         <p id="showbody">{{$user_info->email}}</p>
         <br />
-        <p id="showbody">{{$user_info->salutation_id}}</p>
         <br />
         <p id="showbody">{{$user_info->title}}</p>
         <br />

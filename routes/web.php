@@ -11,11 +11,11 @@ Route::get('index', function () {
 });
 
 Route::get('legacy', function (){
-    return view('about-us/about');
+    return view('legacy/legacy');
 });
 
 Route::get('getinvolved', function (){
-    return view('get-involved/getinvolved');
+    return view('getinvolved/getinvolved');
 });
 
 Route::get('blog', function (){
@@ -37,24 +37,28 @@ Route::get('contact', function (){
 //Blog Routes
 
 Route::get('whatsnew', 'BlogPostController@index');
-Route::get('userprofile', 'HomeController@index');
 
 Route::group(['middleware' => 'App\Http\Middleware\Admin'], function() {
     Route::get('whatsnew/create', 'BlogPostController@create');
     Route::get('whatsnew/{blog_post}/edit', 'BlogPostController@edit');
     Route::patch('whatsnew/{blog_post}', 'BlogPostController@update');
     Route::delete('whatsnew/{blog_post}', 'BlogPostController@destroy');
+    Route::get('userprofile', 'HomeController@index');
+    Route::get('userprofile/create', 'HomeController@create');
 });
 
 Route::post('whatsnew', 'BlogPostController@store');
 Route::get('whatsnew/{blog_post}', 'BlogPostController@show');
 Route::post('upload', 'UploadController@upload');
 
+<<<<<<< HEAD
 //Comments
 Route::resource('comments', 'CommentController');
 
 //userprofile
 Route::get('userprofile/create', 'HomeController@create');
+=======
+>>>>>>> c990ae72ff15c4b3fc8ec8a064831e0721eda84a
 Route::post('userprofile', 'HomeController@store');
 Route::get('userprofile/{user_info}/edit', 'HomeController@edit');
 Route::get('userprofile/{user_info}', 'HomeController@show');
@@ -69,7 +73,11 @@ Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCall
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('donate','DonatesController@index');
-Route::post('paypal/payment', 'DonatesController@payWithpaypal');
-Route::get('paywithpaypal', array('as' => 'donate.paywithpaypal','uses' => 'DonatesController@payWithPaypal',));
-Route::get('paypal', array('as' => 'status','uses' => 'DonatesController@getPaymentStatus',));
+
+Route::group(['middleware' => ['web']], function () {
+    Route::get('donate','DonatesController@index');
+    Route::post('paypal/payment', 'DonatesController@payWithpaypal');
+    Route::get('paywithpaypal', array('as' => 'donate.paywithpaypal','uses' => 'DonatesController@payWithPaypal',));
+    Route::get('paypal', array('as' => 'status','uses' => 'DonatesController@getPaymentStatus',));
+});
+

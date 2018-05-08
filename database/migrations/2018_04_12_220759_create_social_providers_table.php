@@ -31,6 +31,7 @@ class CreateSocialProvidersTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('social_providers');
     }
 }

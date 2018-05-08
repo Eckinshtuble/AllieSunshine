@@ -13,11 +13,14 @@ class CreateThankYousTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('thank_yous', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('thank_you_card_id')->unsigned()->nullable();
             $table->timestamps();
         });
+
     }
 
     /**

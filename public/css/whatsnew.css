@@ -1,3 +1,7 @@
+#defaultImg{
+    width: 50%;
+}
+
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -16,9 +20,10 @@
     text-decoration: none;
     color: #555;
     border-bottom: 1px solid white;
+    float: right;
 }
 
-#readbutton{
+.read-btn {
     float: right;
     margin-right: 70px;
 }
@@ -94,14 +99,6 @@ button:hover{
     }
 
 }
-
-@media (max-width: 950px){
-    #readbutton{
-        float: none;
-        text-align: center;
-    }
-}
-
 @media (max-width: 600px){
     #readbutton{
         float: none;
