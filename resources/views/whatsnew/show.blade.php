@@ -22,5 +22,22 @@
             {{ $comment->comment_body }}
         @endforeach
         <br />
+        <br />
+        <div id="comments">
+            @foreach($blog_post->comments as $comment)
+                Body: {{$comment->comment_body}}<br/>
+          @endforeach
+            <br/>
+        </div>
+        <br />
+        <form method="POST" action="">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <label for="comment_body">Body:</label>
+            <input name="comment_body" type="text"><br>
+            <br/>
+            <button type="submit">Create</button><br>
+        </form>
+
+        @include('partials.errors')
 </div>
 @endsection

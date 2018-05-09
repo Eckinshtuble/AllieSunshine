@@ -49,7 +49,16 @@ Route::group(['middleware' => 'App\Http\Middleware\Admin'], function() {
 
 Route::post('whatsnew', 'BlogPostController@store');
 Route::get('whatsnew/{blog_post}', 'BlogPostController@show');
+Route::post('upload', 'UploadController@upload');
 
+<<<<<<< HEAD
+//Comments
+Route::resource('comments', 'CommentController');
+
+//userprofile
+Route::get('userprofile/create', 'HomeController@create');
+=======
+>>>>>>> c990ae72ff15c4b3fc8ec8a064831e0721eda84a
 Route::post('userprofile', 'HomeController@store');
 Route::get('userprofile/{user_info}/edit', 'HomeController@edit');
 Route::get('userprofile/{user_info}', 'HomeController@show');

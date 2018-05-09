@@ -13,18 +13,23 @@
         @foreach ($blog_posts as $blog_post)
             <div class="section">
                 <div class="one">
+<<<<<<< HEAD
+                    Created on: {{ date('F d, Y', strtotime($blog_post->created_at)) }} <br />
+=======
                     <h3>{{ $blog_post->id }}</h3>
+>>>>>>> 810fcb60494496f90f81293e9124f69107ad8d00
                     <br/>
 
                 </div>
                 <div class="one">
                     <h3>{{ $blog_post->blog_post_title }}</h3>
                     <br/>
-                   
+
+                    <img id="defaultImg" src="{{ asset('images/default.png') }}" />
                 </div>
                 <div class="two">
                     <hr class="hrtag">
-                    <br />
+                    
                         <p> {{ substr($blog_post->blog_post_body, 0, 350)}} ...</p>
                         <br />
                     <br />
@@ -37,11 +42,14 @@
                 </div>
                 <br /><br />
             @if(Auth::check() && Auth::user()->admin())
+<<<<<<< HEAD
+=======
                 <button class="adminbutton">
                     <a id="edit" href="{{ action('BlogPostController@edit', $blog_post->id) }}">
                         Edit
                     </a>
                 </button>
+>>>>>>> 810fcb60494496f90f81293e9124f69107ad8d00
                 <a class="btn btn-full edit-btn" href="{{ action('BlogPostController@edit', $blog_post->id) }}">Edit</a>
             @endif
 
@@ -63,8 +71,17 @@
 
         @endforeach
     </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <div class="googleCalendar">
+        <iframe src="https://calendar.google.com/calendar/embed?src=mattcipriano61%40gmail.com&ctz=America%2FToronto" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+=======
+>>>>>>> 810fcb60494496f90f81293e9124f69107ad8d00
+=======
 
     <div class="googleCalendar">
         <iframe src="https://calendar.google.com/calendar/embed?src=mattcipriano61%40gmail.com&ctz=America%2FToronto" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
+>>>>>>> f486c4c168bc441c8379c61614c390778a85a58b
 @endsection

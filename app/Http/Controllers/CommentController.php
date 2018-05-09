@@ -11,6 +11,17 @@ use App\Comment;
 
 class CommentController extends Controller
 {
+    public function index(){
+        $comments =  Comment::all();
+        return view('whatsnew.show', compact("comments"));
+    }
+
+    public function show($comment){
+        $comment = comment::find($comment);
+
+        return view('whatsnew.show', compact("comment"));
+    }
+
     public function __construct(){
         $this->middleware('auth', ['only' =>['destroy', 'create']]);
     }
@@ -29,6 +40,10 @@ class CommentController extends Controller
     }
 
     public function create(){
+<<<<<<< HEAD
+        $blog_posts = BlogPost::all()->pluck('blog_post_title', 'blog_post_id');
+        return view('whatsnew.show', compact("blog_posts"));
+=======
         $blog_posts = BlogPost::all();
 
         return view('whatsnew.create', compact("blog_posts"));
@@ -42,6 +57,7 @@ class CommentController extends Controller
         Comment::create($formData);
 
         return redirect('whatsnew');
+>>>>>>> 810fcb60494496f90f81293e9124f69107ad8d00
     }
 
     public function edit($comment){
@@ -63,4 +79,7 @@ class CommentController extends Controller
         $comment->delete();
         return redirect('whatsnew');
     }
+
+
+
 }

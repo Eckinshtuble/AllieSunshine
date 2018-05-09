@@ -31,6 +31,8 @@ class BlogPostController extends Controller
         $formData = $request->all();
         $formData['user_id'] = \Auth::User()->id;
 
+        $formData['user_id'] = \Auth::User()->id;
+
         BlogPost::create($formData);
 
         return redirect('whatsnew');
@@ -59,6 +61,8 @@ class BlogPostController extends Controller
         return redirect('whatsnew');
     }
 
+<<<<<<< HEAD
+=======
    /* public function image(){
         if(Input::hasfile('file')){
             $file = Input::file('file');
@@ -66,4 +70,5 @@ class BlogPostController extends Controller
             echo '<img src="images/' . $file->getClientOriginalName() . '" />';
         }
     }*/
+>>>>>>> 810fcb60494496f90f81293e9124f69107ad8d00
 }
