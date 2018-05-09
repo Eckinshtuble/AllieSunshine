@@ -1,8 +1,8 @@
 @extends('master')
 
-@section('main-body')
-    <link href="{{ asset('css/whatsnew.css') }}" rel="stylesheet">
+<link href="{{ asset('css/whatsnew.css') }}" rel="stylesheet">
 
+@section('main-body')
     <h2>What's New</h2>
 
     @if(Auth::check() && Auth::user()->admin())
@@ -62,7 +62,9 @@
                 <br />
 
         @endforeach
-
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=noor.alwakel2025%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FToronto" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </section>
+
+    <div class="googleCalendar">
+        <iframe src="https://calendar.google.com/calendar/embed?src=mattcipriano61%40gmail.com&ctz=America%2FToronto" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
 @endsection

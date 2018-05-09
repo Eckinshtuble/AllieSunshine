@@ -1,7 +1,11 @@
 @extends('master')
 
-@section('main-body')
+<link href="{{ asset('css/paypal.css') }}" rel="stylesheet">
 
-    <p>Your payment was cancelled.</p>
+@section('main-body')
+    <div class="payment-cancelled">
+        <p>Your payment was cancelled.</p>
+    </div>
+
 
 @endsection

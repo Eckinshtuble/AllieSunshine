@@ -46,12 +46,10 @@
                     <label for='message' class='message'>Comment<span>(required)</span></label>
                     <textarea name='message' id='message' rows='10' class='message'  required aria-required='true'></textarea>
                 </div>
-                <p class='submit'>
-                    <input type='submit' value='Submit &#187;' class='btn btn-full'/>
-                    <input type="hidden" id="_wpnonce" name="_wpnonce" value="695d7d2d89" /><input type="hidden" name="_wp_http_referer" value="/contact/" />
-                    <input type='hidden' name='contact-form-id' value='4' />
-                    <input type='hidden' name='action' value='grunion-contact-form' />
-                </p>
+
+                <div class="submit">
+                    <button type='submit' class='btn-contact'>Submit &#187;</button>
+                </div>
             </form>
         </div>
     </div>
