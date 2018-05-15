@@ -70,7 +70,8 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('userprofile') }}">{{"Welcome, " . Auth::user()->first_name }}</a>
+                        <a class="nav-link" href="{{ url('userprofile/' . Auth::user()->id) }}">{{"Welcome, " . Auth::user()->first_name }}</a>
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
@@ -89,7 +90,7 @@
     <p>
         <span class="footer-text">Copyright 2018 The Allie Sunshine Project | Developed by Parallax Web Design</span>
         <a href="https://instagram.com"><img src={{ asset('/images/instagram.png')}} width="40" height="40" class="logo-inst" alt="Logo"></a>
-        <a href="https://facebook.com"><img src={{ asset('/images/facebook.png')}} width="40" height="40" alt="Logo"></a>
+        <a href="https://www.facebook.com/thealliesunshineproject/"><img src={{ asset('/images/facebook.png')}} width="40" height="40" alt="Logo"></a>
     </p>
 </section>
 

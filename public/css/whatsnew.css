@@ -1,3 +1,7 @@
+#defaultImg{
+    width: 50%;
+}
+
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -16,6 +20,7 @@
     text-decoration: none;
     color: #555;
     border-bottom: 1px solid white;
+    float: right;
 }
 
 .read-btn {

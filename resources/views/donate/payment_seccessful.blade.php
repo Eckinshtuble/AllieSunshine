@@ -1,7 +1,11 @@
 @extends('master')
 
-@section('main-body')
+<link href="{{ asset('css/paypal.css') }}" rel="stylesheet">
 
-    <p>Your payment was successful. Thank you.</p>
+@section('main-body')
+    <div class="payment-success">
+        <p>Your payment was successful. Thank you.</p>
+    </div>
+
 
 @endsection

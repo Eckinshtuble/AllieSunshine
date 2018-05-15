@@ -1,45 +1,30 @@
 @extends('master')
 
-<link href="{{ asset('/css/blogshow.css') }}" rel="stylesheet">
+<link href="{{ asset('/css/userprofile.css') }}" rel="stylesheet">
 
 @section('main-body')
-    <div id="blogPostId">
-
+    <div class="profile-body">
         <br />
-        <h2>HI</h2>
+        <h2>{{ Auth::user()->first_name . "'s Profile" }}</h2>
         <br />
         <br/>
         <br/>
-        <button class="readbutton"><a href="{{ action('HomeController@edit', $user_info->id) }}">Edit</a></button>
+        <a href="{{ action('HomeController@edit', $user_info->id) }}" class="btn btn-full read-btn">Edit</a>
         <p id="hr"><hr class="hrtag"/></p>
         <br/>
-        <p id="showbody">{{$user_info->first_name}}</p>
+        <p class="profile-show">{{$user_info->first_name}}</p>
         <br />
-        <p id="showbody">{{$user_info->last_name}}</p>
+        <p class="profile-show">{{$user_info->last_name}}</p>
         <br />
-        <p id="showbody">{{$user_info->email}}</p>
+        <p class="profile-show">{{$user_info->email}}</p>
         <br />
+        <p class="profile-show">{{$user_info->title}}</p>
         <br />
-        <p id="showbody">{{$user_info->title}}</p>
+        <p class="profile-show">{{$user_info->address}}</p>
         <br />
-        <p id="showbody">{{$user_info->address}}</p>
+        <p class="profile-show">{{$user_info->city}}</p>
         <br />
-        <p id="showbody">{{$user_info->city}}</p>
+        <p class="profile-show">{{$user_info->phone}}</p>
         <br />
-        <p id="showbody">{{$user_info->province_id}}</p>
-        <br />
-        <p id="showbody">{{$user_info->country_id}}</p>
-        <br />
-        <p id="showbody">{{$user_info->postal_code}}</p>
-        <br />
-        <p id="showbody">{{$user_info->phone}}</p>
-        <br />
-        <p id="showbody">{{$user_info->phone_preference_id}}</p>
-        <br />
-        <p id="showbody">{{$user_info->contact_preference_id}}</p>
-        <br />
-        <p id="showbody">{{$user_info->casl_agreement}}</p>
-        <br />
-
     </div>
 @endsection

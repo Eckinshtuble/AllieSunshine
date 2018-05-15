@@ -85,7 +85,7 @@ class LoginController extends Controller
 
         auth()->login($user);
 
-        return redirect('getinvolved')->with('status', 'You have Logged In Successfully!');
+        return redirect('index')->with('status', 'You have Logged In Successfully!');
 
     }
 }
