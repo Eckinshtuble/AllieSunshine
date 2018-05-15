@@ -1,8 +1,13 @@
 @extends('master')
 
 @section('main-body')
-    <h2>Get Involved</h2>
-    <div class="googleCalendar">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=noor.alwakel2025%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FToronto" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    </div>
+    <section class="section-gray">
+        <h2>How to Get Involved</h2>
+        <p>
+            We are always looking new people to be apart of the Allie Sunshine Project!
+            Whether you are interested in donating money, your time at one of our events
+            or if you have a wonderful idea that you would like to share with the Allie
+            Sunshine Project.
+        </p>
+    </section>
 @endsection

@@ -1,7 +1,12 @@
 @extends('master')
+
 <link href="{{ asset('/css/contact.css') }}" rel="stylesheet">
+
 @section('main-body')
-    <h2>Contact</h2>
+    <section class="section-gray-title-only">
+        <h2>Contact Us</h2>
+    </section>
+
     <div id="map" >
         <script>
             function myMap() {
@@ -18,9 +23,6 @@
         </script>
 
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmOVRjfsgBtbaxWUTNnoM5khoSwsYW_WU&callback=myMap"></script>
-        <br />
-        <br />
-
     </div>
     <br />
     <br/>

@@ -71,6 +71,14 @@ section {
 	background-color: #f4f4f4;
 }
 
+.section-gray-title-only {
+	background-color: #f4f4f4;
+}
+
+.section-gray-title-only h2{
+	margin-bottom: 0px;
+}
+
 section p{
 	font-size: 1.2em;
 	line-height: 145%;
@@ -109,7 +117,6 @@ section p{
 .footer {
 	text-align: center;
 	font-size: 0.8em;
-	background-color: #f4f4f4;
 }
 
 .footer p {

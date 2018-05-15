@@ -4,7 +4,9 @@
     <link href="{{ asset('css/lightbox.css') }}" rel="stylesheet">
 </head>
 @section('content')
-    <h2>Gallery</h2>
+    <section class="section-gray-title-only">
+        <h2>Sunshine Gallery</h2>
+    </section>
     <div class="container">
         <div>
             <a href="{{asset('images/gallery/gallery-1_opt.jpg')}}" data-lightbox="box"><img src="{{ asset('images/gallery/gallery-1_opt.jpg') }}"  class="galleryimg"></a>

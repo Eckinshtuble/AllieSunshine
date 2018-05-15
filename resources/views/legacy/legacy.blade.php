@@ -3,8 +3,11 @@
 <link href="{{ asset('/css/legacy.css') }}" rel="stylesheet">
 
 @section('main-body')
+    <section class="section-gray-title-only">
+        <h2>Legacy</h2>
+    </section>
+
     <section>
-    <h2>Legacy</h2>
     <div class="legacy-wrap">
         <div class="legacy-wrap-inner">
             <h3>Legacy of the Allie Sunshine Project</h3>
