@@ -1,164 +1,45 @@
-<<<<<<< HEAD
-.emailForm{
-    float: inherit;
-    text-align: center;
-    margin-left: 650px;
-}
-
-.secretlabel{
-    display: none;
-}
-
-.regularlabel{
-    display: inherit;
-}
-
-h3{
-=======
-.wrapper {
-    width: 960px;
-    margin: 0 auto;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2em;
-    font-weight: 300;
-}
-
-h3 {
-    text-align: center;
-}
-
-.name, .email, .message {
-    display: block;
-    width: 600px;
-    margin: 0 auto 15px auto;
-}
-
 #map {
     width: 100%;
-    height: 400px;
+    height: 350px;
 }
 
-.submit {
-<<<<<<< HEAD
-    display: block;
->>>>>>> 810fcb60494496f90f81293e9124f69107ad8d00
+#mapInfo{
     text-align: center;
 }
 
-#map {
-    width: 100%;
-<<<<<<< HEAD
-    height: 300px;
+#mapInfo h3{
+    margin-bottom: 15px;
 }
 
-
-@media (max-width: 1550px) {
-    .emailform{
-        margin-left : 600px;
-    }
-}
-
-@media (max-width: 1450px) {
-    .emailform{
-        margin-left : 500px;
-    }
-}
-
-@media (max-width: 1350px) {
-    .emailform{
-        margin-left : 480px;
-    }
-}
-
-@media (max-width: 1250px) {
-    .emailform{
-        margin-left : 440px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .emailform{
-        margin-left: 370px;
-    }
-}
-
-@media (max-width: 1050px) {
-    .emailform{
-        margin-left: 300px;
-    }
-}
-
-@media (max-width: 900px) {
-    .emailform{
-        margin-left: 250px;
-    }
-}
-
-@media (max-width: 800px) {
-    .emailform{
-        margin-left: 150px;
-    }
-}
-
-@media (max-width: 600px) {
-    .emailform{
-        margin-left: 50px;
-    }
-}
-
-@media (max-width: 500px) {
-    .emailform{
-        margin-left: 100px;
-    }
-
-    .secretlabel{
-        display: inherit;
-    }
-
-    .regularlabel{
-        display: none;
-    }
-}
-
-@media (max-width: 375px) {
-    .emailform{
-        margin-left: 30px;
-    }
-
-=======
-    height: 400px;
-=======
+.section-gray h3{
     text-align: center;
 }
 
-.btn-contact {
-    background-color: #ffe607;
-    font-size: 1em;
-    color: navy;
-    display: inline-block;
-    font-weight: 300;
-    border-radius: 200px;
-    margin-top: 10px;
-    margin-right: 20px;
-    padding: 10px 40px;
-    text-decoration: none;
-    cursor: pointer;
-    border: 1px solid #ffe607;
+form div{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+form div label{
+    text-align: left;
     width: 200px;
->>>>>>> f486c4c168bc441c8379c61614c390778a85a58b
+    vertical-align: top;
 }
 
-
-@media (max-width: 1024px) {
-    .wrapper {
-        width: 100%;
-    }
+[type=text]{
+    width: 300px;
 }
 
-@media (max-width: 768px) {
-    .name, .email, .message {
-        width: 85%;
-        padding: 0 20px;
+textarea{
+    width: 300px;
+}
+
+@media only screen and (max-width: 991px) {
+    [type=text]{
+        width: 200px;
     }
->>>>>>> 810fcb60494496f90f81293e9124f69107ad8d00
+
+    textarea{
+        width: 200px;
+    }
 }

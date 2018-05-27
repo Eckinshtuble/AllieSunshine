@@ -40,7 +40,7 @@
                     <a class="nav-link" href="{{ url('index') }}">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{ url('whatsnew') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">What's New?</a>
+                    <a class="nav-link dropdown-toggle" href="{{ url('whatsnew') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">What's New</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ url('whatsnew') }}">Blog</a>
                         <a class="dropdown-item" href="{{ url('whatsnew') }}">Calendar</a>
@@ -89,8 +89,8 @@
 <section class="footer">
     <p>
         <span class="footer-text">Copyright 2018 The Allie Sunshine Project | Developed by Parallax Web Design</span>
-        <a href="https://instagram.com"><img src={{ asset('/images/instagram.png')}} width="40" height="40" class="logo-inst" alt="Logo"></a>
-        <a href="https://www.facebook.com/thealliesunshineproject/"><img src={{ asset('/images/facebook.png')}} width="40" height="40" alt="Logo"></a>
+        <a href="https://www.instagram.com/thealliesunshineproject/" target="_blank"><img src={{ asset('/images/instagram.png')}} width="40" height="40" class="logo-inst" alt="Logo"></a>
+        <a href="https://www.facebook.com/thealliesunshineproject/" target="_blank"><img src={{ asset('/images/facebook.png')}} width="40" height="40" alt="Logo"></a>
     </p>
 </section>
 

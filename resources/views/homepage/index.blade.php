@@ -43,7 +43,6 @@
         </a>
         -->
     </div>
-    <div class="carousel-gradient"></div>
 
     <div class="carousel-header">
         <h1>Become a Ray of Sunshine Today!</h1>
