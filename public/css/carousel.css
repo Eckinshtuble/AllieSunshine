@@ -6,7 +6,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 80vh;
+    height: 72.5vh;
     text-align: center;
 }
 
@@ -26,7 +26,7 @@
 
 .carousel-inner > .carousel-item > .first-slide {
     width: 100%;
-    height: 80vh;
+    height: 65vh;
 
     background: url("../images/carouselLARGE3.jpg") no-repeat center center scroll;
     -webkit-background-size: cover;
@@ -37,7 +37,7 @@
 
 .carousel-inner > .carousel-item > .second-slide {
     width: 100%;
-    height: 80vh;
+    height: 65vh;
     background: url("../images/carouselLARGE4alt.jpg") no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -47,7 +47,7 @@
 
 .carousel-inner > .carousel-item > .third-slide {
     width: 100%;
-    height: 80vh;
+    height: 65vh;
     background: url("../images/carouselLARGE2.jpg") no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -250,81 +250,66 @@
 }
 
 
+  /***********************************/
+ /* Become a Ray of Sunshine Today! */
+/***********************************/
 
 
-
-
-
-
-
-
-
-.carousel-gradient {
+.section-carousel{
+    background-color: #ffe607;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    bottom: 7.5%;
     position: absolute;
-    bottom: 0vh;
     width: 100%;
-    height: 80vh;
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-    z-index: 2;
 }
 
-.carousel-header {
-    position: absolute;
-    bottom: 0vh;
-    left: 5%;
-    padding-bottom: 60px;
-    width: 95%;
-    z-index: 3;
+.section-carousel h1:hover{
+    background-color: #ffd507;
 }
 
-.carousel-header h1 {
-    font-size: 3em;
+.section-carousel a:hover{
+    text-decoration: none;
+}
+
+.section-carousel h1 {
+    font-size: 2.5em;
     font-family: "Roboto Slab", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    margin: 0 auto 10px;
-    color: #fff;
+    color: rgb(33, 37, 41);
     letter-spacing: 1px;
     word-spacing: 2px;
-}
-
-.line-break{
-    display: none;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 0;
 }
 
   /*********************/
  /* Responsive Styles */
 /*********************/
 
+
 @media only screen and (max-width: 1200px) {
-
-}
-
-@media only screen and (max-width: 991px) {
-    .carousel-header {
-        left: 0%;
-        width: 100%;
-        text-align: center;
+    .carousel-inner > .carousel-item > .first-slide {
+        height: 70vh;
     }
 
-    .carousel-header h1{
-        font-size: 2.4em;
-        text-align: center;
-        padding: 0 100px;
+    .carousel-inner > .carousel-item > .second-slide {
+        height: 70vh;
     }
 
-    .carousel-header .btn:link:first-of-type{
-        margin: 10px;
+    .carousel-inner > .carousel-item > .third-slide {
+        height: 70vh;
+    }
+
+    .section-carousel h1 {
+        font-size: 1.5em;
     }
 }
 
 @media only screen and (max-width: 600px) {
-
-    .carousel-inner {
-        height: 50vh;
-    }
-
     .carousel-inner > .carousel-item > .first-slide {
         background: url("../images/carouselSMALL3.jpg") no-repeat top center scroll;
     }
@@ -337,31 +322,30 @@
         background: url("../images/carouselSMALL2.jpg") no-repeat top center scroll;
     }
 
-    .carousel-gradient {
-        bottom: 30vh;
-        height: 50vh;
+    .section-carousel h1 {
+        font-size: 1.5em;
+        padding-left: 105px;
+        padding-right: 105px;
     }
+}
 
-    .carousel-header {
-        top: 40%;
-        left: 0;
-        height: 30vh;
-        padding: 0 25px 30px;
-        color: white;
+@media only screen and (max-width: 500px) {
+    .section-carousel h1 {
+        padding-left: 80px;
+        padding-right: 80px;
     }
+}
 
-    .carousel-header h1 {
-        color: white;
-        font-size: 1.8em;
-        margin-top: 30px;
-        padding: 0;
+@media only screen and (max-width: 420px) {
+    .section-carousel h1 {
+        padding-left: 60px;
+        padding-right: 60px;
     }
+}
 
-    .carousel-header .btn:link:first-of-type{
-        margin-bottom: 10px;
-    }
-
-    .line-break{
-        display: block;
+@media only screen and (max-width: 400px) {
+    .section-carousel h1 {
+        padding-left: 40px;
+        padding-right: 40px;
     }
 }

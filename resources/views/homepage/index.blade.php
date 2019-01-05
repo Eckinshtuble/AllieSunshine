@@ -44,12 +44,11 @@
         -->
     </div>
 
-    <div class="carousel-header">
-        <h1>Become a Ray of Sunshine Today!</h1>
-        <a class="btn" href="{{ url('getinvolved') }}">Get Involved</a>
-        <br class="line-break"/>
-        <a class="btn" href="{{ url('donate') }}">Donate</a>
-    </div>
+    <section class="section-carousel">
+        <a href="{{ url('getinvolved') }}">
+            <h1>Become a Ray of Sunshine Today!</h1>
+        </a>
+    </section>
 @endsection
 
 @section('main-body')
