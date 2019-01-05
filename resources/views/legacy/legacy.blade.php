@@ -7,7 +7,6 @@
         <h2>Legacy</h2>
     </section>
 
-    <section>
     <div class="legacy-wrap">
         <div class="legacy-wrap-inner">
 
@@ -52,6 +51,5 @@
             </p>
         </div>
     </div>
-    </section>
 @endsection
 
