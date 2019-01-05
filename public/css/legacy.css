@@ -8,17 +8,20 @@
 
 .legacy-wrap-inner {
     margin-bottom: 10%;
+    margin-top: 10%;
 }
 
 .legacy-wrap-inner p {
     float: right;
     width: 500px;
+    text-align: justify;
 }
 
 .legacy-wrap-inner-bottom p {
     float: left;
     width: 600px;
     margin-bottom: 10%;
+    text-align: justify;
 }
 
 .legacy-wrap-inner-bottom img {
