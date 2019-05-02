@@ -42,13 +42,11 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </a>
         -->
-    </div>
 
-    <section class="section-carousel">
-        <a href="{{ url('getinvolved') }}">
+        <a class="sunshine-carousel" href="{{ url('getinvolved') }}">
             <h1>Become a Ray of Sunshine Today!</h1>
         </a>
-    </section>
+    </div>
 @endsection
 
 @section('main-body')

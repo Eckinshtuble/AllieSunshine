@@ -26,64 +26,71 @@
 </head>
 
 <body>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="{{ url('index') }}"><img src={{ URL::asset('images/logo_opt.png')}} alt="AllieSunshineProject" class="logo"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+
+        <ul class="navbar-nav navbar-auth">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('index') }}">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="{{ url('whatsnew') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">What's New</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ url('whatsnew') }}">Blog</a>
+                    <a class="dropdown-item" href="{{ url('whatsnew') }}">Calendar</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('legacy') }}">Legacy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('getinvolved') }}">Get Involved</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('gallery') }}">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('contact') }}">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('donate') }}">Donate</a>
+            </li>
+
+            <!--
+            @if (Auth::guest())
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/register') }}">Register</a>
+                </li>
+            @else
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('userprofile/' . Auth::user()->id) }}">{{"Welcome, " . Auth::user()->first_name }}</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
+                </li>
+            @endif
+            -->
+        </ul>
+    </div>
+</nav>
+
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="{{ url('index') }}"><img src={{ URL::asset('images/logo_opt.png')}} alt="Logo" class="logo"></a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <img src={{ URL::asset('images/logo_opt.png')}} alt="Logo" class="logo">
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('index') }}">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{ url('whatsnew') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">What's New</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('whatsnew') }}">Blog</a>
-                        <a class="dropdown-item" href="{{ url('whatsnew') }}">Calendar</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('legacy') }}">Legacy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('getinvolved') }}">Get Involved</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('gallery') }}">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('contact') }}">Contact</a>
-                </li>
-            </ul>
-
-            <ul class="navbar-nav navbar-auth">
-                @if (Auth::guest())
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/login') }}">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/register') }}">Register</a>
-                    </li>
-                @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('userprofile/' . Auth::user()->id) }}">{{"Welcome, " . Auth::user()->first_name }}</a>
-
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
-                    </li>
-                @endif
-            </ul>
-        </div>
-    </nav>
-
     @yield('content')
 </header>
+
 @yield('main-body')
 
 <section class="footer">

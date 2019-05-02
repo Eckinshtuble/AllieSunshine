@@ -2,22 +2,33 @@
  /* Navigation Styles */
 /*********************/
 
+header{
+  background-color: #f4f4f4;
+  padding-bottom: 0;
+}
+
 nav {
 	background-color: #fff;
 	font-family: 'Lato', sans-serif;
 	text-transform: uppercase;
 	font-size: 0.95em;
-	height: 20vh;
+	height: 100px;
 	z-index: 999;
-	color: navy;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.navbar{
+  padding: 0;
+}
+
+nav .navbar-brand{
+	margin-right: 0px;
+  	padding: 0;
 }
 
 nav .navbar-brand img{
-	width: 200px;
-}
-
-nav .navbar-auth{
-	padding-right: 20px;
+	width: 175px;
 }
 
 nav .nav-item {
@@ -36,7 +47,7 @@ nav button{
 h2 {
 	font-size: 2.2em;
 	text-align: center;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	letter-spacing: 1px;
 	word-spacing: 2px;
 }
@@ -65,9 +76,10 @@ h4{
 }
 
 section {
-	margin: 0;
+	margin: 0 auto;
 	font-family: 'Lato', sans-serif;
-	padding: 60px 275px;
+	width: 100%;
+	padding: 40px 0 20px;
 	font-weight: 300;
 }
 
@@ -80,11 +92,12 @@ section {
 }
 
 .section-gray-title-only h2{
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 
 section p{
 	font-size: 1.2em;
+	width: 70%;
 	line-height: 145%;
 	margin: 0 auto 20px;
 }
@@ -95,22 +108,23 @@ section p{
 /*****************/
 
 .btn:link, .btn:visited {
-  background-color: #ffe607;
-  font-size: 1em;
-  color: navy;
-  display: inline-block;
-  font-weight: 300;
-  border-radius: 200px;
-  margin-top: 10px;
-  margin-right: 20px;
-  padding: 10px 40px;
-  text-decoration: none;
+	background-color: #ffe607;
+	font-size: 1em;
+	color: navy;
+	display: block;
+	border-radius: 200px;
+	font-weight: 300;
+	padding: 10px 0;
+	margin: 20px auto 40px;
+	text-decoration: none;
+	text-align: center;
+	width: 15%;
 }
 
 .btn:hover, .btn:active, input[type=submit]:hover, input[type=submit]:active {
-  background-color: #ffd507;
-  color: navy;
-  border-bottom: none;
+	background-color: #ffd507;
+	color: navy;
+	border-bottom: none;
 }
 
 
@@ -121,38 +135,42 @@ section p{
 .footer {
 	text-align: center;
 	font-size: 0.8em;
+	padding-bottom: 40px;
 }
 
 .footer p {
-	margin: 0;
+	margin: 0 auto;
 }
 
 .footer span {
 	display: inline-block;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 	margin-right: 10px;
 }
 
-  .googleCalendar {
-	  position: relative;
-	  padding-bottom: 75% !important;
-	  height: 0;
-	  overflow: hidden;
-  }
 
+
+/*
+.googleCalendar {
+  position: relative;
+  padding-bottom: 75% !important;
+  height: 0;
+  overflow: hidden;
+}
+
+.googleCalendar iframe {
+  position: absolute;
+  top:0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 80%;
+}
+
+@media only screen and (max-width: 992px) {
   .googleCalendar iframe {
-	  position: absolute;
-	  top:0;
-	  left: 50%;
-	  transform: translateX(-50%);
-	  width: 85%;
-	  height: 80%;
+	  width: 90%;
+	  height: 100%;
   }
-
-  @media only screen and (max-width: 992px) {
-	  .googleCalendar iframe {
-		  width: 90%;
-		  height: 100%;
-	  }
-  }
-
+}
+*/

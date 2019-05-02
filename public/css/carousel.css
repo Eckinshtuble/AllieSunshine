@@ -1,13 +1,18 @@
 .carousel {
     position: relative;
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 20px;
+    height: calc(100vh - 100px);
 }
 
 .carousel-inner {
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 72.5vh;
+    height: calc(100vh - 260px);
     text-align: center;
+    border-radius: 15px;
 }
 
 .carousel-item {
@@ -26,8 +31,7 @@
 
 .carousel-inner > .carousel-item > .first-slide {
     width: 100%;
-    height: 65vh;
-
+    height: calc(100vh - 260px);
     background: url("../images/carouselLARGE3.jpg") no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -37,7 +41,7 @@
 
 .carousel-inner > .carousel-item > .second-slide {
     width: 100%;
-    height: 65vh;
+    height: calc(100vh - 260px);
     background: url("../images/carouselLARGE4alt.jpg") no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -47,21 +51,13 @@
 
 .carousel-inner > .carousel-item > .third-slide {
     width: 100%;
-    height: 65vh;
+    height: calc(100vh - 260px);
     background: url("../images/carouselLARGE2.jpg") no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-
-
-
-
-
-
-
-
 
 .carousel-item.active, .carousel-item-next, .carousel-item-prev {
     display: block;
@@ -254,56 +250,45 @@
  /* Become a Ray of Sunshine Today! */
 /***********************************/
 
-
-.section-carousel{
-    background-color: #ffe607;
-    margin: 0 auto;
-    padding: 0;
+.sunshine-carousel{
+    margin: 0;
     text-align: center;
-    bottom: 7.5%;
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 70%;
 }
 
-.section-carousel h1:hover{
-    background-color: #ffd507;
-}
-
-.section-carousel a:hover{
+.sunshine-carousel:hover{
     text-decoration: none;
 }
 
-.section-carousel h1 {
-    font-size: 2.5em;
+.sunshine-carousel h1 {
+    border-radius: 15px;
+    font-size: 2em;
     font-family: "Roboto Slab", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     color: rgb(33, 37, 41);
+    background-color: #ffe607;
     letter-spacing: 1px;
     word-spacing: 2px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin-bottom: 0;
+    margin-top: 20px;
+    text-decoration: none;
+    height: 80px;
 }
+
+.sunshine-carousel h1:hover{
+    background-color: #ffd507;
+}
+
 
   /*********************/
  /* Responsive Styles */
 /*********************/
 
-
 @media only screen and (max-width: 1200px) {
-    .carousel-inner > .carousel-item > .first-slide {
-        height: 70vh;
-    }
-
-    .carousel-inner > .carousel-item > .second-slide {
-        height: 70vh;
-    }
-
-    .carousel-inner > .carousel-item > .third-slide {
-        height: 70vh;
-    }
-
     .section-carousel h1 {
         font-size: 1.5em;
     }
@@ -311,15 +296,18 @@
 
 @media only screen and (max-width: 600px) {
     .carousel-inner > .carousel-item > .first-slide {
-        background: url("../images/carouselSMALL3.jpg") no-repeat top center scroll;
+        /*background: url("../images/carouselSMALL3.jpg") no-repeat top center scroll; */
+        height: 100vh;
     }
 
     .carousel-inner > .carousel-item > .second-slide {
-        background: url("../images/carouselSMALL4alt.jpg") no-repeat top center scroll;
+        /*background: url("../images/carouselSMALL4alt.jpg") no-repeat top center scroll; */
+        height: 100vh;
     }
 
     .carousel-inner > .carousel-item > .third-slide {
-        background: url("../images/carouselSMALL2.jpg") no-repeat top center scroll;
+        /* background: url("../images/carouselSMALL2.jpg") no-repeat top center scroll; */
+        height: 100vh;
     }
 
     .section-carousel h1 {
