@@ -4,7 +4,12 @@
 
 @media only screen and (max-width: 1200px) {
     section {
-        padding: 60px 175px;
+        padding: 60px 0px;
+    }
+
+    .carousel {
+        width: 80%;
+        padding-top: 0;
     }
 }
 
@@ -47,12 +52,15 @@
        }
   }
 
+
   /*************/
  /* 991px MAX */
 /*************/
 
+
 @media only screen and (max-width: 991px) {
     .navbar{
+        width: 100%;
         padding: 0;
         text-align: center;
     }
@@ -60,12 +68,13 @@
     nav .navbar-brand{
         margin: 0;
         padding: 0;
-        display: none;
+       float: left;
     }
 
     nav .navbar-toggler {
-         margin: 0 auto;
-         border: none;
+        border: none;
+
+        text-align: right;
     }
 
     nav .navbar-toggler:focus {
@@ -97,16 +106,8 @@
         padding: 20px 0 20px;
     }
 
-    nav .nav-item a:hover {
-        background-color: #f4f4f4;
-    }
-
-    nav .nav-item{
-        padding: 0 20px 10px;
-    }
-
     nav .nav-item a{
-        padding: 0;
+        padding: 15px;
     }
 
     nav .navbar-auth{
@@ -122,16 +123,21 @@
         text-align: left;
     }
 
-    .btn:link, .btn:visited {
-        margin: 0 auto;
-    }
-
     .footer p {
         text-align: center;
     }
 
     .footer span {
         display: block;
+    }
+
+    .carousel {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .carousel-inner {
+        border-radius: 0px;
     }
 }
 
@@ -150,14 +156,25 @@
     }
 
     section {
-        padding: 60px 25px;
+        padding: 60px 20px;
     }
 
     section p{
         font-size: 1em;
+        width: 90%;
     }
 
-    .btn:link, .btn:visited {
-        font-size: 0.8em;
+    .carousel-inner {
+        height: calc(100vh - 370px);
+    }
+
+    .carousel-inner > .carousel-item > .first-slide,
+    .carousel-inner > .carousel-item > .second-slide,
+    .carousel-inner > .carousel-item > .third-slide {
+        height: calc(100vh - 370px);
+    }
+
+    .first-heading{
+        height: 200px;
     }
 }

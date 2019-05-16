@@ -51,17 +51,18 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('legacy') }}">Legacy</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('getinvolved') }}">Get Involved</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="{{ url('getinvolved') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Get Involved</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ url('getinvolved') }}">Volunteer</a>
+                    <a class="dropdown-item" href="{{ url('donate') }}">Donate</a>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('gallery') }}">Gallery</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('contact') }}">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('donate') }}">Donate</a>
             </li>
 
             <!--

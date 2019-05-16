@@ -13,6 +13,7 @@
     @endif
 
     <div class="carousel slide" data-ride="carousel">
+        <a class="first-heading" href="{{ url('getinvolved') }}">Become a Ray of Sunshine Today!</a>
         <!--
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -42,11 +43,11 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </a>
         -->
-
-        <a class="sunshine-carousel" href="{{ url('getinvolved') }}">
-            <h1>Become a Ray of Sunshine Today!</h1>
-        </a>
     </div>
+
+    <!--
+    <a class="second-heading" href="{{ url('donate') }}">Donate to the Project!</a>
+    -->
 @endsection
 
 @section('main-body')
